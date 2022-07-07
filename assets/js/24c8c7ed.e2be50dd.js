@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkit_3038c=self.webpackChunkit_3038c||[]).push([[6748],{8326:l=>{l.exports=JSON.parse('{"label":"hello","permalink":"/IT3038C/blog/tags/hello","allTagsPath":"/IT3038C/blog/tags","count":2}')}}]);
