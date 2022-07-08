@@ -222,8 +222,8 @@ mkdir it3038c-scripts
 cd it3038c-scripts
 mkdir powershell
 mkdir bash
-new-item -type file powershell\keep.git
-new-item -type file bash\keep.git
+new-item -type file powershell\.gitkeep
+new-item -type file bash\.gitkeep
 ```
 
 Initialize the git repo and connect it to github, then sync. The commands are:
