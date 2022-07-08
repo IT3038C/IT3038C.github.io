@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkit_3038c=self.webpackChunkit_3038c||[]).push([[5072],{2697:e=>{e.exports=JSON.parse('{"permalink":"/IT3038C/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
