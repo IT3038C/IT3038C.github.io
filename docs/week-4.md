@@ -1,5 +1,6 @@
 ---
 title: Week 4 – Git and GitHub
+sidebar_position: 4
 ---
 
 # Week 4 – Git and GitHub

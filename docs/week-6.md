@@ -1,5 +1,6 @@
 ---
 title: Week 6 – Node JS
+sidebar_position: 6
 ---
 # Week 6 - Node JS
 

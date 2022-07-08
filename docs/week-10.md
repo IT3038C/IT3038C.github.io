@@ -1,5 +1,6 @@
 ---
 title: Week 10 – Working with APIs
+sidebar_position: 10
 ---
 # Week 10 – Working with APIs
 

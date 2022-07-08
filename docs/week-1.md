@@ -1,5 +1,6 @@
 ---
 title: Week 1 – Getting Started with your VMs
+sidebar_position: 1
 ---
 
 # Week 1 – Getting Started with your VMs

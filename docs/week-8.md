@@ -1,5 +1,6 @@
 ---
 title: Week 8 – Web Scraping Part 1
+sidebar_position: 8
 ---
 
 # Week 8 – Web Scraping Part 1

@@ -1,5 +1,6 @@
 ---
 title: Week 5 – Python
+sidebar_position: 5
 ---
 
 # Week 5 – Python

@@ -1,5 +1,6 @@
 ---
 title: Week 3 – PowerShell
+sidebar_position: 3
 ---
 
 # Week 3 - PowerShell

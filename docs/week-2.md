@@ -1,5 +1,6 @@
 ---
 title: Week 2 – Bash
+sidebar_position: 2
 ---
 
 # Week 2 - Bash

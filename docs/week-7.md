@@ -1,5 +1,6 @@
 ---
 title: Week 7 - Modules, Plugins, Debugging
+sidebar_position: 7
 ---
 
 # Week 7 - Modules, Plugins, Debugging
