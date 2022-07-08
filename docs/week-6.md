@@ -313,7 +313,7 @@ console.log("Server listening on port 3000")
 
 This gets us the same results with a little less code.
 
-Right now, regardless of the request, our NODE site serves the same page with a dynamic variable. If you go to a subpage of our site, you’ll get see our content change on the page, but this isn’t very practical. Let’s use a module for reading from the file system to get straight HTML content. Create a new folder called Public within your Node folder. Create a file called index.html within the Public folder.
+Right now, regardless of the request, our NODE site serves the same page with a dynamic variable. If you go to a sub-page of our site, you’ll get see our content change on the page, but this isn’t very practical. Let’s use a module for reading from the file system to get straight HTML content. Create a new folder called Public within your Node folder. Create a file called index.html within the Public folder.
 
 Put the following HTML code in Index.html:
 

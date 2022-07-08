@@ -41,7 +41,7 @@ Once finished, select ALL of the text in the window under Public key for pasting
 ![Screenshot of OpenSSH Key from PuTTYgen](/img/week-2/putty/4-openssh-key.png)
 
 Click “Save public key” and “Save private key”. Click “Yes” that you are sure you want to save without a passphrase.
-Save them to a location like C:\sshkeys\
+Save them to a location like C:\ssh_keys\
 Give the file name your username, reedws.pub and reedws.ppk respectively.
 
 Return to your Linux session. Run the command as your user, making sure all spelling matches:
@@ -123,7 +123,7 @@ Back to your putty window, run the command
 
 ```bash
 cd ~
-git clone git@github.com:<yourusername>/it3038c-scripts.git
+git clone git@github.com:<your-username>/it3038c-scripts.git
 ```
 
 You may be promoted to validate the cert. Type `yes`
@@ -402,7 +402,7 @@ vim myFirstScript.sh
 ```
 
 Press the `i` key in Vim will allow you to insert.
-Start file with “shabang"
+Start file with "sha-bang"
 
 ```bash
 #!/bin/bash
@@ -555,7 +555,7 @@ echo "On $TODAY, there were $POSITIVE positive COVID cases"
 
 ## Lab 2
 
-Using this template as a starting point, add more data to this script. Please include at least 3 additional datapoints, displayed in a readable output.
+Using this template as a starting point, add more data to this script. Please include at least 3 additional data points, displayed in a readable output.
 
 ### Example
 

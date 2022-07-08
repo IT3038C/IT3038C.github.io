@@ -10,7 +10,7 @@ Let’s talk briefly to clear up some of the python data types that might be a b
 
 ### Lists
 
-Lists are the same as arrays. They’re just called lists in Python, even though they are arrays. However, python lists are far more flexible than arrays because you can have multiple data types in a list, including sublists.
+Lists are the same as arrays. They’re just called lists in Python, even though they are arrays. However, python lists are far more flexible than arrays because you can have multiple data types in a list, including sub-lists.
 
 Let’s create a list now.
 
@@ -26,9 +26,9 @@ Create a list called food
 
 Notice how the first entry in a list is [0], because lists are “zero based”, meaning they start at 0.
 
-### Sublists
+### Sub-lists
 
-Lists can also have Sublists, like so
+Lists can also have Sub-lists, like so
 
 ```python
 >>> food = [["apple","banana"],["tomato","corn"], "beer"]
@@ -170,13 +170,13 @@ Let’s create an example.
 Key data types must be immutable, so no lists or dictionaries. Tuples are ok though.
 
 ```python
->>> drink['beer']=("dunkle","IPA","Ale")
+>>> drink['beer']=("dunkel","IPA","Ale")
 
 >>> drink['beer']
-('dunkle', 'IPA', 'Ale')
+('dunkel', 'IPA', 'Ale')
 
 >>> drink['beer'][0]
-'dunkle'
+'dunkel'
 
 >>> drink['beer'][2]
 'Ale'

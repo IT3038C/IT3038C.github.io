@@ -249,7 +249,7 @@ Python can be extended using modules, typically installed using PIP.
 
 Now, you can install a python module anywhere at anytime, however, if you’re not careful, you can make things very difficult for yourself if you decide to switch from one project to another.
 
-To prevent this, Python created a plugin isolation method known as VirtualENV. VirtualENV allows you to set and install your Python modules to a specific directory, known as your virtual environment. You activate this VENV when you work with a specific set of scripts, and deactivate it when you’re finished. The benefit is that you can have certain versions of plugins, certain specific plugins, and plugin modifications that don’t impact the entire system.
+To prevent this, Python created a plugin isolation method known as VirtualENV. VirtualENV allows you to set and install your Python modules to a specific directory, known as your virtual environment. You activate this vENV when you work with a specific set of scripts, and deactivate it when you’re finished. The benefit is that you can have certain versions of plugins, certain specific plugins, and plugin modifications that don’t impact the entire system.
 
 THESE COMMANDS ARE IN LINUX. IN WINDOWS, CALL `venv/webscraping/Scripts/activate.ps1` to activate
 

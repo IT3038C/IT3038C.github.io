@@ -16,7 +16,7 @@ Links:
 
 Let's do some web scraping – a tool that can be used for both good and evil. Please choose good and be careful, too many scraping attempts can get you blocked or bring a web server to its knees.
 
-First, let's create a VENV for our scraping environment. If you didn't already, to do this, run the following commands. This is linux using my users home directory.
+First, let's create a vENV for our scraping environment. If you didn't already, to do this, run the following commands. This is linux using my users home directory.
 
 ### Linux
 
@@ -24,8 +24,8 @@ First, let's create a VENV for our scraping environment. If you didn't already, 
 $ virtualenv ~/venv/webscraping
 
  # Using base prefix '/usr/local'
- # New python executable in /home/botheaj/venv/scraping/bin/python3.6
- # Also creating executable in /home/botheaj/venv/scraping/bin/python
+ # New python executable in /home/reedws/venv/scraping/bin/python3.6
+ # Also creating executable in /home/reedws/venv/scraping/bin/python
  # Installing setuptools, pip, wheel...done.
 
 $ source ~/venv/webscraping/bin/activate
