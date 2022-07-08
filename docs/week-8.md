@@ -1,8 +1,8 @@
 ---
-title: Week 8 – Web Scraping
+title: Week 8 – Web Scraping Part 1
 ---
 
-# Week 8 – Web Scraping
+# Week 8 – Web Scraping Part 1
 
 ## Python Data Storage Types
 
