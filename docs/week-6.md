@@ -27,7 +27,7 @@ npm --version
 
 ## Install Node on Linux
 
-To install Node on Linux, we’ll use a provided RPM install. According to <https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora>, just run the following:
+To install Node on Linux, we'll use a provided RPM install. According to <https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora>, just run the following:
 
 ```sh
 curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
@@ -46,8 +46,8 @@ npm --version
 
 ## Node JS Basics
 
-By now we’re getting a feel for how scripting languages work. Node is a script language that takes advantage of Javascript, making it a more ‘familiar’ language for traditional web developers.
-While Node is a web language, it is also capable of many server-side operations as well. We’ll take a look at both sides this week.
+By now we're getting a feel for how scripting languages work. Node is a script language that takes advantage of Javascript, making it a more 'familiar' language for traditional web developers.
+While Node is a web language, it is also capable of many server-side operations as well. We'll take a look at both sides this week.
 
 Create a Node folder in your IT3038C-scripts directory and create a new file called test.js.
 Add the following code
@@ -64,7 +64,7 @@ $ node test.js
 "Hello, World"
 ```
 
-Simple... now, let’s put this string in a variable.
+Simple... now, let's put this string in a variable.
 
 Variables can be declared using the keywords `var`, `let`, or `const`. `var` is the most common, but `let` and `const` are more modern. A `let` variable can be reassigned while a `const` variable cannot.
 
@@ -97,7 +97,7 @@ console.log("directory name: " + __dirname);
 console.log("directory and file name: " + __filename);
 ```
 
-Node includes several delivered modules, similar to Python. Modules can be added using npm. More on that later. For now, let’s add the "Path" module.
+Node includes several delivered modules, similar to Python. Modules can be added using npm. More on that later. For now, let's add the "Path" module.
 
 At the top of the script, add
 
@@ -105,7 +105,7 @@ At the top of the script, add
 const path = require("path");
 ```
 
-A quick aside about the ‘;’ semicolon usage. Semicolons are implied with Javascript, so you don’t HAVE to have it, but it is a best practice.
+A quick aside about the ';' semicolon usage. Semicolons are implied with Javascript, so you don't HAVE to have it, but it is a best practice.
 
 The require method tells our code to import this module. Now we can use "path" functions in our code. Add this line to the bottom of our script.
 
@@ -129,7 +129,7 @@ node test
 ```
 
 Notice the output is an "array" with 2 value. The first value is our Node executable, and the second is our full path to our file.
-If I add an argument after the script by running it with some additional parameters, we’ll see those parameters added to this array.
+If I add an argument after the script by running it with some additional parameters, we'll see those parameters added to this array.
 
 ```bash
 node test var1
@@ -150,7 +150,7 @@ const hostname = process.argv[2]
 console.log(`Checking IP of: ${hostname}`)
 ```
 
-Now, let’s find the equivalent of NodeJS to find the IP of our hostname. To do this, we’re going to require to import the DNS module.
+Now, let's find the equivalent of NodeJS to find the IP of our hostname. To do this, we're going to require to import the DNS module.
 At the top of the file, add
 
 ```js
@@ -179,7 +179,7 @@ console.log(`Checking IP of: ${hostname}`)
 hostnameLookup(hostname);
 ```
 
-Don’t worry if this code doesn’t make a lot of sense. That will come with experience.
+Don't worry if this code doesn't make a lot of sense. That will come with experience.
 The point here is that we have all of the same abilities in Node that we have in most other programming languages, though it may require a few additional lines of code.
 
 ### Get User Input
@@ -188,9 +188,9 @@ We can also get input from the user while the script is running. This uses the s
 Create a new file called getUserInput.js
 
 This file is going to ask a series of questions and generate some responses, similar to what we did last week in Python.
-Let’s start by asking the user for their name:
+Let's start by asking the user for their name:
 
-First, we ask with the ‘process.stdout.write’ command or console.log. console.log is just process.stdout.write with a line-break at the end, so either one is fine.
+First, we ask with the 'process.stdout.write' command or console.log. console.log is just process.stdout.write with a line-break at the end, so either one is fine.
 
 ```js
 process.stdout.write("Hello. What is your name? ")
@@ -200,10 +200,10 @@ process.stdin.on('data', (data) => {
 });
 ```
 
-Now, javascript runs asynchronously and javascript loves things called callback functions. This means, we’ll have to create a function that runs whenever an event is fired. In this case, our event is called ‘process.stdin.on’ and we can pass our information, the "data" variable, to our ‘callback function’ that will handle the rest.
+Now, javascript runs asynchronously and javascript loves things called callback functions. This means, we'll have to create a function that runs whenever an event is fired. In this case, our event is called 'process.stdin.on' and we can pass our information, the "data" variable, to our 'callback function' that will handle the rest.
 Run the script.
 
-Now it’s taking our input, but it’s not ending. We can end it by adding `process.exit()`.
+Now it's taking our input, but it's not ending. We can end it by adding `process.exit()`.
 
 We can also call a function on exit of the application, like so
 
@@ -222,7 +222,7 @@ process.on('exit', () => {
 
 ### Web servers
 
-Let’s get to the bread and butter of Node, and that is the web server.
+Let's get to the bread and butter of Node, and that is the web server.
 To do this, we will need the HTTP module.
 Create a new file called server.js
 
@@ -314,7 +314,7 @@ console.log("Server listening on port 3000")
 
 This gets us the same results with a little less code.
 
-Right now, regardless of the request, our NODE site serves the same page with a dynamic variable. If you go to a sub-page of our site, you’ll get see our content change on the page, but this isn’t very practical. Let’s use a module for reading from the file system to get straight HTML content. Create a new folder called Public within your Node folder. Create a file called index.html within the Public folder.
+Right now, regardless of the request, our NODE site serves the same page with a dynamic variable. If you go to a sub-page of our site, you'll get see our content change on the page, but this isn't very practical. Let's use a module for reading from the file system to get straight HTML content. Create a new folder called Public within your Node folder. Create a file called index.html within the Public folder.
 
 Put the following HTML code in Index.html:
 
@@ -332,7 +332,7 @@ Put the following HTML code in Index.html:
 
 Return to server.js.
 
-Let’s add an additional path to our server. To do this, we need to account for every request coming into our web server.
+Let's add an additional path to our server. To do this, we need to account for every request coming into our web server.
 The default request of / will serve our static HTML message.
 
 Any other request should return a 404 error, using the req.url variable we defined earlier to give the user a clearer message.
@@ -355,8 +355,8 @@ http.createServer((req, res) => {
 console.log("Server listening on port 3000");
 ```
 
-Now, we’ll add another path on to our web server that can include anything we want. How about we add a /sysinfo path and serve some system information to it.
-I want sysinfo to return information about the OS, so I’m going to include the `require("OS")` module. I’m also going to add the IP module to get our IP address.
+Now, we'll add another path on to our web server that can include anything we want. How about we add a /sysinfo path and serve some system information to it.
+I want sysinfo to return information about the OS, so I'm going to include the `require("OS")` module. I'm also going to add the IP module to get our IP address.
 
 ```js
 const http = require("http");
@@ -408,8 +408,8 @@ npm install ip
 You'll notice this creates a folder called node_modules within your project where any npm dependencies are stored. It also creates a package.json and package-lock.son file in that folder to list the installed dependencies. You'll want to make sure to commit the package and package-lock while adding the node_modules folder to your gitignore file.
 
 Now run it again.
-We’ll get into modules more in the coming weeks.
-Let’s do one more thing to our index.html page. Add a hyperlink to the /sysinfo page
+We'll get into modules more in the coming weeks.
+Let's do one more thing to our index.html page. Add a hyperlink to the /sysinfo page
 
 ```html
 <!DOCTYPE html>
@@ -424,7 +424,7 @@ Let’s do one more thing to our index.html page. Add a hyperlink to the /sysinf
 </html>
 ```
 
-For our assignment, we’ll be filling in the blanks on our sysinfo page above.
+For our assignment, we'll be filling in the blanks on our sysinfo page above.
 
 ## Lab 6
 
@@ -435,7 +435,7 @@ For our assignment, we’ll be filling in the blanks on our sysinfo page above.
   - CPU is an array. That has to count for something
   - Memory is returned in bytes. How many bytes are in a Megabyte?
   - Server time is returned in seconds. How many seconds are in a day? Subtract as many days as you can. Now subtract at many hours as you can. Now subtract as many minutes as you can... Etc…
-  - Google is your friend. If you’re stuck, you can typically find how to get these outputs via Google.
+  - Google is your friend. If you're stuck, you can typically find how to get these outputs via Google.
 
 Here is a sample page:
 

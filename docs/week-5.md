@@ -14,11 +14,11 @@ List of Links for this week:
 
 Go to <https://www.python.org/downloads/windows/>
 
-Under Python 3.X.X, select “Download Windows x86-64 executable installer”
+Under Python 3.X.X, select "Download Windows x86-64 executable installer"
 
 Run the EXE
 
-Check “Add Python 3.X.X to PATH” and click “Install Now”
+Check "Add Python 3.X.X to PATH" and click "Install Now"
 
 Once finished, click Close. You don't have to disable path length limit, but you can if you want to.
 
@@ -106,7 +106,7 @@ You can concatenate strings by 'adding' them together
 'hello, world!'
 ```
 
-In my previous example, if I make the + 5 a “string”, I can use the “+” sign to concatenate them:
+In my previous example, if I make the + 5 a "string", I can use the "+" sign to concatenate them:
 
 ```python
 >>> print("hello" + "5")
@@ -154,7 +154,7 @@ And… it works? Assuming all of your single quotes and parenthesis are in the r
 
 Let's add some to this script.
 
-After this last print, let's do another print that says “I wish I was (age x 2) years old”:
+After this last print, let's do another print that says "I wish I was (age x 2) years old":
 
 Let's just trying passing in myAge*2 and see what happens:
 
@@ -162,7 +162,7 @@ Let's just trying passing in myAge*2 and see what happens:
 print('I wish I was ' + myAge * 2 + ' years old')
 ```
 
-Take a look at the output. Assuming your age was 20, you would see the output “I wish I was 2020 years old”, which is not what we expected. Since myAge is a string, because that's how it was input, we have to convert it to a number so we can use our math against it. We do this by CASTING.
+Take a look at the output. Assuming your age was 20, you would see the output "I wish I was 2020 years old", which is not what we expected. Since myAge is a string, because that's how it was input, we have to convert it to a number so we can use our math against it. We do this by CASTING.
 
  ```python
 print('I wish I was ' + int(myAge) * 2 + ' years old')
@@ -232,7 +232,7 @@ Try to run it now. You'll get the same questions, then the end will ERROR?
 
 Why?
 
-Python works with modules. It comes delivered with TONS of modules, but you have to import them. “Time” is part of the “Standard Library” of Python modules. Let's import the “time” module so we can use the sleep function.
+Python works with modules. It comes delivered with TONS of modules, but you have to import them. "Time" is part of the "Standard Library" of Python modules. Let's import the "time" module so we can use the sleep function.
 
 At the top of the file, type
 
@@ -240,7 +240,7 @@ At the top of the file, type
 
 Save and rerun the script. This time you should get a final output after 3 second.
 
-We can also use this module to get the run time of this application, and replace “I'm only a few seconds old” with the actual length of time the program has been running.
+We can also use this module to get the run time of this application, and replace "I'm only a few seconds old" with the actual length of time the program has been running.
 
 To do this, we need to think it through a bit. Let's use our python command line to work out a solution to get the length of time the program has actually been running. Hop into the Python shell (in Windows or Linux)
 
@@ -298,7 +298,7 @@ Save and run. You should have a successful run. If not, let's find out why.
 
 Now, we can expand on this program, adding a few more fun things. First, let's commit our script to GIT. This is a good habit to get into, so let's do it.
 
-Now, reopen our script and let's add some logic in here. Let's start simple and do something like “if myAge < 13 ….”
+Now, reopen our script and let's add some logic in here. Let's start simple and do something like "if myAge < 13 …."
 
 Open the script and right after we set myAge, let's add some logic on a new line:
 
@@ -329,7 +329,7 @@ We can do something similar with our name. Let's have the program continuously a
 myName = input()
 
 while myName != 'your name':
-  print('This is not “your name”. Please type “your name”?')
+  print('This is not "your name". Please type "your name"?')
   myName = input()
 
 print('Hello, ' + myName + '. That is a good name. How old are you?')

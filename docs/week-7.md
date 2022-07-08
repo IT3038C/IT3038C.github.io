@@ -15,29 +15,29 @@ List of Links for this week:
 
 ## Debugging
 
-Debugging is key to writing well-executed scripts. That’s why it’s important to become familiar with how the debugger for your IDE works.
+Debugging is key to writing well-executed scripts. That's why it's important to become familiar with how the debugger for your IDE works.
 
-For these examples, I’ll be using PowerShell ISE. This is a simple debugging program, but will allow us to try out some of the concepts of debugging.
+For these examples, I'll be using PowerShell ISE. This is a simple debugging program, but will allow us to try out some of the concepts of debugging.
 
 Launch PowerShell ISE on your Windows machine.
 
 Open the `sysinfo.ps1` file we worked on a few weeks back
 
-In __ISE__, right-click on the first line and select “Toggle BreakPoint”
+In __ISE__, right-click on the first line and select "Toggle BreakPoint"
 
-Select “Run Script”
+Select "Run Script"
 
 You should see right away that the breakpoint was hit. Now, using the Debug drop-down menu, we can slowly step through this program.
 
-Notice how many steps the assignment of $IP is. Using ‘Step-in;, the debugger will step through every step that PowerShell takes to calculate this value.
+Notice how many steps the assignment of $IP is. Using 'Step-in;, the debugger will step through every step that PowerShell takes to calculate this value.
 
-We can use “Step-out” to skip the rest of this particular step and move on to the next step.
+We can use "Step-out" to skip the rest of this particular step and move on to the next step.
 
-If we hover over $IP, we’ll see the value of that variable. This can be very useful when working with a script that has several variables.
+If we hover over $IP, we'll see the value of that variable. This can be very useful when working with a script that has several variables.
 
-Stepping over will skip a step and “Continue” will finish running the script.
+Stepping over will skip a step and "Continue" will finish running the script.
 
-Let’s try a loop in PowerShell and debug it. This loop will simply print 5 random numbers.
+Let's try a loop in PowerShell and debug it. This loop will simply print 5 random numbers.
 
 Open a new script and save it as `rando.ps1`
 
@@ -50,7 +50,7 @@ for($i=0; $i -lt 5; $i++){
 }
 ```
 
-Run it to make sure it works. Now, let’s debug. Set the breakpoint at the ‘for’ loop.
+Run it to make sure it works. Now, let's debug. Set the breakpoint at the 'for' loop.
 
 Notice how we can hover over all of the variable at any time and get the value for that variable at that point in time.
 
@@ -74,9 +74,9 @@ for($i=0; $i -lt 5; $i++){
 
 Now open `C:\logs\rando.log` and view the results of the file. You may have to create the folder `C:\logs`.
 
-Let’s stick to PowerShell a little longer. Debugging is something that comes with time, so to understand it, it’s best just to use it when the time arises and learn from that.
+Let's stick to PowerShell a little longer. Debugging is something that comes with time, so to understand it, it's best just to use it when the time arises and learn from that.
 
-Let’s write a PowerShell script that will give us some performance data about our Windows machine. The Windows performance monitoring framework is known as Performance Logging and Alerting (PLA). PLA is built into Windows and uses COM and DCOM to obtain performance and diagnosis information from both local and remote computers.  You can see PLA in action by opening the
+Let's write a PowerShell script that will give us some performance data about our Windows machine. The Windows performance monitoring framework is known as Performance Logging and Alerting (PLA). PLA is built into Windows and uses COM and DCOM to obtain performance and diagnosis information from both local and remote computers.  You can see PLA in action by opening the
 
 Task Manager | More Details | Performance | Open Resource Monitor.
 
@@ -84,19 +84,19 @@ Windows performance is measured in counters. There are counters for all aspects 
 
 `> Get-counter`
 
-Get-counter returns the counter sets available as well as a sample of performance on this machine. Since we’re on a single machine, that’s what we’ll focus on, but you can easily send this command to multiple machines on your network to get performance data.
+Get-counter returns the counter sets available as well as a sample of performance on this machine. Since we're on a single machine, that's what we'll focus on, but you can easily send this command to multiple machines on your network to get performance data.
 
 ```powershell
-$Machines = ‘localhost’
+$Machines = 'localhost'
 
 Foreach ($machine in $Machines)
 {
   $RCounters = Get-Counter -ListSet * -ComputerName $machine
-  “There are {0} counters on {1}” -f $RCounters.count, ($machine)
+  "There are {0} counters on {1}" -f $RCounters.count, ($machine)
 }
 ```
 
-You can add multiple machines to the $Machines list to query them. The command tells us how many counters we have. We can use debugging to get a more in-depth look at how this ran. Get-Counter allows us to specify key pieces of data that we’re concerned about, like Processor, Memory, and Networking. We can specify these properties when we run our Get-Counter command. Let’s modify our script to specify some more key data. To do this, we’ll need to specify Get-Counter for each set of values we want.
+You can add multiple machines to the $Machines list to query them. The command tells us how many counters we have. We can use debugging to get a more in-depth look at how this ran. Get-Counter allows us to specify key pieces of data that we're concerned about, like Processor, Memory, and Networking. We can specify these properties when we run our Get-Counter command. Let's modify our script to specify some more key data. To do this, we'll need to specify Get-Counter for each set of values we want.
 
 ```powershell
 $Machines = 'localhost'
@@ -120,7 +120,7 @@ Foreach ($machine in $Machines)
 }
 ```
 
-Now, let’s see if we can pretty this up a bit. We can see by debugging that we’re getting an array of objects back for $pt. We can do another Foreach loop and print them in a more readable fashion.
+Now, let's see if we can pretty this up a bit. We can see by debugging that we're getting an array of objects back for $pt. We can do another Foreach loop and print them in a more readable fashion.
 
 ```powershell
 $Machines = 'localhost'
@@ -145,7 +145,7 @@ Notice that it only wrote the last output. We need to include the -append flag t
 
 `out-file -append C:\output.txt`
 
-It may also help to throw a date-time stamp in front. To do this, we’ll just edit our Sample output and include a formatted Get-Date.
+It may also help to throw a date-time stamp in front. To do this, we'll just edit our Sample output and include a formatted Get-Date.
 
 ```powershell
 $Machines = 'localhost'
@@ -180,17 +180,17 @@ Function GetIP {
 }
 ```
 
-Let’s rewrite this function to a new file. Save this function in a file called tools.psm1.
+Let's rewrite this function to a new file. Save this function in a file called tools.psm1.
 
 Save this file to your PowerShell folder.
 
-Now before we do anything with this, let’s try running GetIP from your PowerShell command window (not from ISE), this command:
+Now before we do anything with this, let's try running GetIP from your PowerShell command window (not from ISE), this command:
 
 ```powershell
 GetIP
 ```
 
-You should get an error saying GetIP doesn’t exist. Now, let’s import our module file like so (note that your path may differ):
+You should get an error saying GetIP doesn't exist. Now, let's import our module file like so (note that your path may differ):
 
 ```powershell
 import-module C:\it3038c-scripts\powershell\tools.psm1
@@ -210,9 +210,9 @@ Set-ExecutionPolicy Unrestricted
 
 Run GetIP one more time.
 
-When it comes to code reuse, writing modules is vital. PowerShell V5 comes pre-built with module importing in mind. In fact, they’ve launched a whole website dedicated to module installation.
+When it comes to code reuse, writing modules is vital. PowerShell V5 comes pre-built with module importing in mind. In fact, they've launched a whole website dedicated to module installation.
 
-One issue with PowerShell is that it doesn’t save our modules when we import them. We can fix this by editing our $profile. We first need to create this file, as it doesn’t exist by default:
+One issue with PowerShell is that it doesn't save our modules when we import them. We can fix this by editing our $profile. We first need to create this file, as it doesn't exist by default:
 
 ```powershell
 new-item -path $profile -itemtype file -force
@@ -248,20 +248,20 @@ find-module
 
 Python can be extended using modules, typically installed using PIP.
 
-Now, you can install a python module anywhere at anytime, however, if you’re not careful, you can make things very difficult for yourself if you decide to switch from one project to another.
+Now, you can install a python module anywhere at anytime, however, if you're not careful, you can make things very difficult for yourself if you decide to switch from one project to another.
 
-To prevent this, Python created a plugin isolation method known as VirtualENV. VirtualENV allows you to set and install your Python modules to a specific directory, known as your virtual environment. You activate this vENV when you work with a specific set of scripts, and deactivate it when you’re finished. The benefit is that you can have certain versions of plugins, certain specific plugins, and plugin modifications that don’t impact the entire system.
+To prevent this, Python created a plugin isolation method known as VirtualENV. VirtualENV allows you to set and install your Python modules to a specific directory, known as your virtual environment. You activate this vENV when you work with a specific set of scripts, and deactivate it when you're finished. The benefit is that you can have certain versions of plugins, certain specific plugins, and plugin modifications that don't impact the entire system.
 
 THESE COMMANDS ARE IN LINUX. IN WINDOWS, CALL `venv/webscraping/Scripts/activate.ps1` to activate
 
-Let’s create our first VirtualENV. First, make sure virtualenv is installed.
+Let's create our first VirtualENV. First, make sure virtualenv is installed.
 
 ```bash
 pip install virtualenv
 virtualenv ~/venv/webscraping/
 ```
 
-Now, “ACTIVATE” this venv so we can demonstrate how this works.
+Now, "ACTIVATE" this venv so we can demonstrate how this works.
 
 Linux:
 
@@ -275,7 +275,7 @@ Windows:
 ~/venv/webscraping/Scripts/activate.ps1
 ```
 
-You can tell it’s activated if you see (webscraping) in front of your command line.
+You can tell it's activated if you see (webscraping) in front of your command line.
 
 ```bash
 pip install bs4
@@ -289,7 +289,7 @@ $ python
 >>>import bs4
 ```
 
-If you don’t get an error, then you know it works.
+If you don't get an error, then you know it works.
 
 Now, deactivate your venv and rerun the bs4 import command
 
@@ -303,23 +303,23 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'bs4'
 ```
 
-The import command will no longer work, because we are no longer in our venv. You can re-activate it by re-running the ‘source’ command above.
+The import command will no longer work, because we are no longer in our venv. You can re-activate it by re-running the 'source' command above.
 
-SIDENOTE: pipenv will combine pip and virtualenv together, but for now, we’ll keep them separate for example sake.
+SIDENOTE: pipenv will combine pip and virtualenv together, but for now, we'll keep them separate for example sake.
 
 NodeJS Modules with NPM
 
-Last up on our tour of modules is NodeJS. Node uses Node Package Manager (NPM) to manage its plugins. NPM is installed with Node. Unlike Python, all NPM modules are installed within the directory you’re working in, unless otherwise specified with the `-g` flag.
+Last up on our tour of modules is NodeJS. Node uses Node Package Manager (NPM) to manage its plugins. NPM is installed with Node. Unlike Python, all NPM modules are installed within the directory you're working in, unless otherwise specified with the `-g` flag.
 
-We installed a module last week to help us get the IP faster. Let’s install a helpful module called node-dev. Node-dev will watch the server.js file for changes and automatically restart the service when a change is detected. To install an npm module, use the following. From your ‘node’ folder:
+We installed a module last week to help us get the IP faster. Let's install a helpful module called node-dev. Node-dev will watch the server.js file for changes and automatically restart the service when a change is detected. To install an npm module, use the following. From your 'node' folder:
 
 ```bash
 npm install node-dev
 ```
 
-Notice your folder now contains a ‘node_modules’ folder. This contains the module and all of its dependencies.
+Notice your folder now contains a 'node_modules' folder. This contains the module and all of its dependencies.
 
-For this particular module, I actually do want to install it globally, so that it can be used in any node folder. To do this, I’ll need sudo rights
+For this particular module, I actually do want to install it globally, so that it can be used in any node folder. To do this, I'll need sudo rights
 
 `$ sudo npm install -g node-dev`
 
@@ -343,6 +343,6 @@ Using the language of your choice, research a plugin that you might find useful.
 * Python: <https://pypi.python.org/pypi>
 * Node: <https://www.npmjs.com/>
 
-Write a script that uses that plugin and include at least 3 different usages of the plugin that you’ve selected. For example, if you’ve selected to use Pillow, a Python plugin for manipulating images, give 3 different examples of tasks you can use this plugin for, like blurring an image, creating a thumbnail or applying a filter.
+Write a script that uses that plugin and include at least 3 different usages of the plugin that you've selected. For example, if you've selected to use Pillow, a Python plugin for manipulating images, give 3 different examples of tasks you can use this plugin for, like blurring an image, creating a thumbnail or applying a filter.
 
-Once you’ve written a script that shows these examples, create another `README.md` file in the `Labs` folder that tells me how to install the modules and run the script you created. [Here is an example of what I'm looking for in the README](https://github.com/reedws/IT3038C/blob/main/examples/lab-7-example.md)
+Once you've written a script that shows these examples, create another `README.md` file in the `Labs` folder that tells me how to install the modules and run the script you created. [Here is an example of what I'm looking for in the README](https://github.com/reedws/IT3038C/blob/main/examples/lab-7-example.md)

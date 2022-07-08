@@ -21,13 +21,13 @@ Use the MSI download for Windows to install. (PowerShell-7.x.x-win-x64.msi)
 
 Take note that PowerShell is also available for other Oss.
 
-We now have TWO versions of PowerShell installed on our server. PowerShell (v5) and PowerShell Core (v7). Both are still accessible. From the start menu, the default PowerShell Icon will launch PowerShell (v5). Search for ‘pwsh’ to find PowerShell Core. Feel free to pin both of these to the task bar.
+We now have TWO versions of PowerShell installed on our server. PowerShell (v5) and PowerShell Core (v7). Both are still accessible. From the start menu, the default PowerShell Icon will launch PowerShell (v5). Search for 'pwsh' to find PowerShell Core. Feel free to pin both of these to the task bar.
 
 ![Both PowerShell icons side by side](/img/week-3/1-powershell-icons.png)
 
 Left is the delivered PowerShell (v5), right is PowerShell Core (v6)
 
-Let’s launch PowerShell Core (pwsh.exe)
+Let's launch PowerShell Core (pwsh.exe)
 
 Type this command
 
@@ -35,7 +35,7 @@ Type this command
 PS C:\> $HOST
 ```
 
-The output shows you the version of PowerShell you’re using. 7.x.x is PowerShell Core. 5.1.xxxx is classic PowerShell.
+The output shows you the version of PowerShell you're using. 7.x.x is PowerShell Core. 5.1.xxxx is classic PowerShell.
 
 $HOST is a variable built into PowerShell. PowerShell comes equipped with several of these built in variables and you can derive a lot of information from them. To see them all, run
 
@@ -77,9 +77,9 @@ PS C:\> (get-command | measure-object).Count
 
 NOTE: PowerShell is NOT case sensitive in most cases, but Linux is. Keep this in mind.
 
-Now, let’s compare classic PowerShell to PowerShell Core. Run the command against both version of the console. Note the count difference between the two. This is because some modules are NOT compatible with PowerShell.
+Now, let's compare classic PowerShell to PowerShell Core. Run the command against both version of the console. Note the count difference between the two. This is because some modules are NOT compatible with PowerShell.
 
-There are significantly fewer functions and cmdlets available in PowerShell Core by default. This is the major difference between the two right now and possibly a reason to stay away from PowerShell Core, depending on what you’re trying to do.
+There are significantly fewer functions and cmdlets available in PowerShell Core by default. This is the major difference between the two right now and possibly a reason to stay away from PowerShell Core, depending on what you're trying to do.
 
 A few useful PowerShell commands:
 
@@ -88,7 +88,7 @@ PowerShell Commandlets
 ```powershell
 get-service
 
-get-service –name “*net*”
+get-service –name "*net*"
 ```
 
 ```text
@@ -104,7 +104,7 @@ Stopped  NetTcpPortSharing  Net.Tcp Port Sharing Service
 
 Pipe operator "|" takes output from one command and passes it to the next. There is no limit to the number of pipe commands you can pass, but be careful.
 
-A command like the one below will start EVERY Windows service. Mostly, you wouldn’t want to do that.
+A command like the one below will start EVERY Windows service. Mostly, you wouldn't want to do that.
 
 ```powershell
 Get-service | start-service
@@ -184,7 +184,7 @@ Get-Alias –Definition Get-ChildItem
 ```
 
 Set and alias and use it
-This sets “ll” alias for Get-ChildItem
+This sets "ll" alias for Get-ChildItem
 
 ```powershell
 set-alias ll Get-ChildItem
@@ -196,7 +196,7 @@ PowerShell has a bit of its own query language too…
 This command shows all stopped services, like you see through services.msc
 
 ```powershell
-Get-Service | Where-Object {$_.status –eq “stopped”}
+Get-Service | Where-Object {$_.status –eq "stopped"}
 ```
 
 ### Functions
@@ -204,7 +204,7 @@ Get-Service | Where-Object {$_.status –eq “stopped”}
 This list of functions. Functions are basically cmdlets, which add additional functionality for simple tasks. Functions typically take cmdlets and bring them to work together.
 
 ```powershell
-get-command | where-object {$_.commandtype –eq “Function”}
+get-command | where-object {$_.commandtype –eq "Function"}
 ```
 
 ### Testing Commands
@@ -225,11 +225,11 @@ Get-Service S* | Stop-Service –confirm
 
 ---
 
-Note: PowerShell Core does not use ISE. It is compatible with VS Code, however, I think ISE is still a powerful tool to understand, so let’s go ahead and launch it from our Classic PowerShell console
+Note: PowerShell Core does not use ISE. It is compatible with VS Code, however, I think ISE is still a powerful tool to understand, so let's go ahead and launch it from our Classic PowerShell console
 
 ---
 
-In ISE, click the “Show Script Pane Top”
+In ISE, click the "Show Script Pane Top"
 
 ![Screenshot of Powershell ISE Show Script Pane Top button](/img/week-3/2-powershell-ise.png)
 
@@ -275,7 +275,7 @@ get-service | select-object displayname, status | out-gridview
 get-service | select-object * | out-gridview
 ```
 
-*Gridview can’t be combined with format-list or format-table
+*Gridview can't be combined with format-list or format-table
 
 ### Variables
 
@@ -300,7 +300,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 F5 or Green Arrow to run the script
 
-Let’s do something similar to what we did in Linux last week and get the IP address of our server.
+Let's do something similar to what we did in Linux last week and get the IP address of our server.
 
 Jump down to the bottom pane, which is a PowerShell Window and run the following commands.
 
@@ -308,7 +308,7 @@ Jump down to the bottom pane, which is a PowerShell Window and run the following
 PS C:\> Get-NetIPAddress
 ```
 
-This cmdlet gives us information about our system’s network. To get more information about this cmdlet, type
+This cmdlet gives us information about our system's network. To get more information about this cmdlet, type
 
 ```powershell
 PS C:\> get-help get-netipaddress
@@ -324,35 +324,35 @@ PS C:\> get-netipaddress.ipaddress
 
 We get an error? Why?
 
-Well, let’s find out what type of command it is
+Well, let's find out what type of command it is
 
 ```powershell
 get-command get-netipaddress
 ```
 
-It’s a function type, not a cmdlet. So we don’t have access to all of the properties like we would a normal cmdlet. But, we can access it using parenthesis to treat the output of the function as an object with properties that we can call.
+It's a function type, not a cmdlet. So we don't have access to all of the properties like we would a normal cmdlet. But, we can access it using parenthesis to treat the output of the function as an object with properties that we can call.
 
 ```powershell
 PS C:\> (get-netipaddress).ipaddress
 ```
 
-Ok this is better, but I don’t care about IPv6. I think I saw a command to specify ipv4, so let’s try that.
+Ok this is better, but I don't care about IPv6. I think I saw a command to specify ipv4, so let's try that.
 
 ```powershell
 PS C:\> (get-netipaddress).ipv4address
 ```
 
-Yes, that’s what I want… but… I don’t want the loopback address (127.0.0.1), so I need to filter that out.
+Yes, that's what I want… but… I don't want the loopback address (127.0.0.1), so I need to filter that out.
 
-To do that, we can use a GREP like command called “Select-string”
+To do that, we can use a GREP like command called "Select-string"
 
 ```powershell
 PS C:\> (get-netipaddress).ipv4address | Select-String "192*"
 ```
 
-This gets us the output we want… but what if we could put this into a function so we don’t have to call this whole string every time.
+This gets us the output we want… but what if we could put this into a function so we don't have to call this whole string every time.
 
-Let’s do that.
+Let's do that.
 
 In the Script Pane, copy and paste the code we wrote that gets us the output we want. Then, we simply wrap this code in a function call
 
@@ -362,7 +362,7 @@ function getIP{
 }
 ```
 
-Now this function simply runs the code. We haven’t told it what to do with the function, so we have to also write the output of the function to the host. Add this line under the function
+Now this function simply runs the code. We haven't told it what to do with the function, so we have to also write the output of the function to the host. Add this line under the function
 
 ```powershell
 write-host(getIP)
@@ -373,9 +373,9 @@ The output will be the IP address, as is was below. Now, taking this function, w
 ```powershell
 $IP = getIP
 
-Write-Host(“This machine’s IP is $IP”)
+Write-Host("This machine's IP is $IP")
 
-Write-Host(“This machine’s IP is {0}” -f $IP)
+Write-Host("This machine's IP is {0}" -f $IP)
 ```
 
 Before we continue
@@ -384,7 +384,7 @@ __Save__ our file as sysinfo.ps1. Save it to C:\it3038c-scripts\powershell\sysin
 
 ### Git on Windows
 
-Let’s sync our Git Repo to our Windows server too. In powershell, locate the IT3038C-Scripts directory you just created.
+Let's sync our Git Repo to our Windows server too. In powershell, locate the IT3038C-Scripts directory you just created.
 
 ```powershell
 PS C:\> cd C:\it3038c-scripts
@@ -414,7 +414,7 @@ Submit your github url containing your PowerShell script to Canvas.
 The PowerShell script, when run, should output the $Body variable to the console and either send an email or output to a file.
 
 PowerShell REQUIRES an SMTP server to send email.
-Office365 will sometimes let you send email, in which case you can use smtp.office365.com. In the case that doesn’t work, you need to find another SMTP service to use. I recommend smtp.gmail.com or another SMTP host provided by your email provider.
+Office365 will sometimes let you send email, in which case you can use smtp.office365.com. In the case that doesn't work, you need to find another SMTP service to use. I recommend smtp.gmail.com or another SMTP host provided by your email provider.
 
 ### Using Gmail SMTP Server
 
@@ -422,7 +422,7 @@ Using Gmail SMTP server is easy if you do NOT use two-factor authentication. If 
 
 Go to <https://myaccount.google.com/apppasswords> and login with your Google account.
 
-Select an app (Mail) and a device (Other) and type “PowerShell SMTP” and click GENERATE
+Select an app (Mail) and a device (Other) and type "PowerShell SMTP" and click GENERATE
 
 ![Screenshot of Gmail App Password Page](/img/week-3/4-gmail-app-password.png)
 
@@ -442,7 +442,7 @@ Description automatically generated
 
 __WARNING__: DO NOT LEAVE THIS ENABLED. Once you finish the lab, please disable this.
 
-Here’s an example of Send-MailMessage
+Here's an example of Send-MailMessage
 
 ```powershell
 Send-MailMessage -To "reedws@ucmail.uc.edu" -From "someone@gmail.com" -Subject "IT3038C Windows SysInfo" -Body $BODY -SmtpServer smtp.gmail.com -port 587 -UseSSL -Credential (Get-Credential)

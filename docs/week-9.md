@@ -93,7 +93,7 @@ Now to get the content of a web page, we simply need to do a GET on that page.
 r = requests.get('https://analytics.usa.gov').content
 ```
 
-Now “r” contains the content of the page analytics.usa.gov. We can then turn that into what's called a “Soup” object and use it for parsing the data into readable chunks.
+Now "r" contains the content of the page analytics.usa.gov. We can then turn that into what's called a "Soup" object and use it for parsing the data into readable chunks.
 
 TIP: If you're wondering what the datatype of a variable might be, simply do type(varname)
 
@@ -102,7 +102,7 @@ type(soup)
 <class 'bs4.BeautifulSoup'>
 ```
 
-With this, we can print the page out more “beautifully”
+With this, we can print the page out more "beautifully"
 
 ```python
 print(soup.prettify()[:100])
@@ -112,7 +112,7 @@ print(soup.prettify()[:100])
 
 We can parse through the data, too.
 
-Let's see if we can extract links from this page. We know that in HTML a link is created using an `<a href=''>` tag, so we just need to find all the “a” tags and print the “href” part out.
+Let's see if we can extract links from this page. We know that in HTML a link is created using an `<a href=''>` tag, so we just need to find all the "a" tags and print the "href" part out.
 
 ```python
 for link in soup.find_all('a'): 
@@ -141,7 +141,7 @@ Let's take a look at the re.compile statement. Notice the '^' icon, which is use
 
 ### Regular Expressions
 
-Regular Expressions or “regex” is a set of characters that act as a 'catch' to other text. This text can be read by a computer to interpret expected content and validate it.
+Regular Expressions or "regex" is a set of characters that act as a 'catch' to other text. This text can be read by a computer to interpret expected content and validate it.
 
 An example of validation might come in the form of an email address. When a user submits a form to a web page, we want to validate the values are legit, so we use regular expressions to validate the form before we send it to the web server. An email address contains the following:
 
@@ -149,7 +149,7 @@ Multiple alphanumeric characters and some special characters before the @ symbol
 
 Multiple alphanumeric characters and some special characters after the @ symbol
 
-A “dot” (.) Or multiple “dots” (.)
+A "dot" (.) Or multiple "dots" (.)
 
 Multiple alphanumeric characters and some special characters after the @ symbol (in this example, limited to .com, .net, .org, .edu)
 
@@ -160,19 +160,19 @@ Here's that website we used last week to test regex:
 And here's a Cheat Sheet:
 
 ```text
-^The – Starts with “The”
+^The – Starts with "The"
 
-End$ - Ends with “End”
+End$ - Ends with "End"
 
-^The End$ - Starts with “The” and ends with “End” (exact match)
+^The End$ - Starts with "The" and ends with "End" (exact match)
 
-The* End - matches string followed by 0 or more “e” (The End is valid, the 'e' is totally optional)
+The* End - matches string followed by 0 or more "e" (The End is valid, the 'e' is totally optional)
 
-The+ End - matches string followed by 1 or more “e” ('Theeeee End' is valid, but not 'Th End')
+The+ End - matches string followed by 1 or more "e" ('Theeeee End' is valid, but not 'Th End')
 
-The? End – may or may not have an “e” (The End, Th End, but not Thee End)
+The? End – may or may not have an "e" (The End, Th End, but not Thee End)
 
-[The ]+End$ - And characters “t”, “h”, “e” or <space>, but nothing else before or after “End”.  ### The square brackets indicate that you can specify that list of characters.
+[The ]+End$ - And characters "t", "h", "e" or <space>, but nothing else before or after "End".  ### The square brackets indicate that you can specify that list of characters.
 
 [A-Z] – Any Capital Letters
 
@@ -184,7 +184,7 @@ The? End – may or may not have an “e” (The End, Th End, but not Thee End)
 
 [@%_-.] – Special characters
 
-\$ - Regex characters used to validate the string need to be 'escaped' with a “\”
+\$ - Regex characters used to validate the string need to be 'escaped' with a "\"
 ```
 
 Let's do a quick regex test:
@@ -219,19 +219,19 @@ import requests, re
 from bs4 import BeautifulSoup
 ```
 
-Then, create the request and assign the output of it to a variable called “r”
+Then, create the request and assign the output of it to a variable called "r"
 
 ```python
 r = requests.get("http://webscraper.io/test-sites/e-commerce/allinone/phones").content
 ```
 
-Now, run r through BeautifulSoup and assign it to another variable called “soup”
+Now, run r through BeautifulSoup and assign it to another variable called "soup"
 
 ```python
 soup = BeautifulSoup(r, "lxml")
 ```
 
-Let's use our soup data to find all of the links on this page. Let's create a variable called “tags”. This variable will use soup.findAll to search through the page's content using regular expression.
+Let's use our soup data to find all of the links on this page. Let's create a variable called "tags". This variable will use soup.findAll to search through the page's content using regular expression.
 
 We can change our compile code another look for specific text in the href
 
@@ -251,7 +251,7 @@ for a in tags:
 
 Let's try searching for all reviews on this page.
 
-Look at the page source and find the reviews. It looks like the reviews are in a “ratings” div class. Let's try pulling that.
+Look at the page source and find the reviews. It looks like the reviews are in a "ratings" div class. Let's try pulling that.
 
 ```python
 import requests, re 
@@ -265,7 +265,7 @@ for p in tags: 
         print(a[0].string) 
 ```
 
-Notice the use of the lxml parser when we define our BeautifulSoup object names “soup”.
+Notice the use of the lxml parser when we define our BeautifulSoup object names "soup".
 
 Let's do one more scraping example:
 
@@ -275,7 +275,7 @@ Reebok's website is super easy to scrape data from. Go to Reebok and select an i
 
 Open the page <https://www.reebok.com/us/flexagon-energy-shoes---preschool/DV8354.html>
 
-Right-click on the title and click “Inspect”
+Right-click on the title and click "Inspect"
 
 Notice the Tag (h1) and the class name. This is what our code will look for.
 

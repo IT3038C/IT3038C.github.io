@@ -15,7 +15,7 @@ Setting-up Virtual Machines for this Class
 
 First, login to <https://sandbox02.cech.uc.edu/vcac/>
 
-Select the domain “ad.uc.edu” and click Next.
+Select the domain "ad.uc.edu" and click Next.
 
 ![Screenshot of Sandbox login domain selection](/img/week-1/sandbox/1-login-1.png)
 
@@ -23,13 +23,13 @@ Sign in with your UC username and password.
 
 ![Screenshot of Sandbox login page](/img/week-1/sandbox/2-login-2.png)
 
-Click the “Deployments” tab, which will contain all of your requests. Select your “Scripting Language” Deployment
+Click the "Deployments" tab, which will contain all of your requests. Select your "Scripting Language" Deployment
 
 ![Screenshot of Sandbox Deployments page for IT3038C](/img/week-1/sandbox/3-deployments.png)
 
 ## Linux Setup and Validation
 
-Let’s select the CentOS server first. Hover over the machine and click the blue gear icon. Click “Connect Using Remote Console”
+Let's select the CentOS server first. Hover over the machine and click the blue gear icon. Click "Connect Using Remote Console"
 
 ![Screenshot of Sandbox connect to console dropdown for CentOS](/img/week-1/sandbox/4-connect-console-centos.png)
 
@@ -64,11 +64,11 @@ Run the command
 ip a
 ```
 
-You should see results similar to what’s below.
+You should see results similar to what's below.
 
 ![Screenshot of result of ip a command](/img/week-1/centos/2-terminal-ip-cmd.png)
 
-While we’re at it, let’s go ahead and change the hostname of your Linux VM. Call is the same name you called your VM when we provisioned it (eg. reedws-centos)
+While we're at it, let's go ahead and change the hostname of your Linux VM. Call is the same name you called your VM when we provisioned it (eg. reedws-centos)
 
 To change it,
 
@@ -82,11 +82,11 @@ Follow this up with a reboot to finalize both our network and hostname settings.
 reboot
 ```
 
-That’ll do it for our CentOS setup for now. Let’s switch to Windows.
+That'll do it for our CentOS setup for now. Let's switch to Windows.
 
 ## Windows Setup
 
-Click the Blue Gear icon next to our Windows machine. Again, click “Connect using Remote Console”
+Click the Blue Gear icon next to our Windows machine. Again, click "Connect using Remote Console"
 
 ![Screenshot of Sandbox connect to console dropdown for Windows](/img/week-1/sandbox/5-connect-console-win.png)
 
@@ -115,7 +115,7 @@ ping www.uc.edu
 
 ![Screenshot of result of ping command for uc.edu](/img/week-1/windows/3-ping-uc-cmd.png)
 
-And why don’t we confirm that we can ping our linux machine. You can get the IP address from the ip addr command that we ran above (hint: it starts with 192.)
+And why don't we confirm that we can ping our linux machine. You can get the IP address from the ip addr command that we ran above (hint: it starts with 192.)
 
 ```powershell
 ping 192.168.33.4    # This will be different for you
@@ -123,7 +123,7 @@ ping 192.168.33.4    # This will be different for you
 
 ![Screenshot of result of ping command for CentOS](/img/week-1/windows/4-ping-centos-cmd.png)
 
-Finally, let’s change our Windows hostname as well:
+Finally, let's change our Windows hostname as well:
 
 ```powershell
 rename-computer reedws-win    ### replace reedws with your username
@@ -135,13 +135,13 @@ Now, restart your Windows machine
 shutdown -r
 ```
 
-Once rebooted, please take a snapshot of each one of your VMs. From the blue gear menu, click “Create Snapshot”. Give it a name if you want, and click Submit. Do this on both your Windows and Linux VMs.
+Once rebooted, please take a snapshot of each one of your VMs. From the blue gear menu, click "Create Snapshot". Give it a name if you want, and click Submit. Do this on both your Windows and Linux VMs.
 
 ![Screenshot of Sandbox Create Snapshot dropdown](/img/week-1/sandbox/6-create-snapshot.png)
 
 ### Windows Software
 
-Let’s install all of the software we’re going to need for our class. Please install all software with it's default options.
+Let's install all of the software we're going to need for our class. Please install all software with it's default options.
 
 #### Git
 
@@ -183,12 +183,12 @@ And there you have it. You are now logged in to your Linux machine, no need to u
 
 Open <https://github.com>
 
-If you already have an account, feel free to use that one. If not, click “Sign up for GitHub”.
+If you already have an account, feel free to use that one. If not, click "Sign up for GitHub".
 Create an account using your UC email address and create a username, for example, I will register with reedws@mail.uc.edu and username reedws.
 
 ![Screenshot of GitHub sign-up page](/img/week-1/github/1-sign-up.png)
 
-If you’ve never used Github, this is a great opportunity to get familiar with how it works. You can create the initial README.md file to say a little about yourself. Just click the green “Continue” button and start editing.
+If you've never used Github, this is a great opportunity to get familiar with how it works. You can create the initial README.md file to say a little about yourself. Just click the green "Continue" button and start editing.
 
 ![Screenshot of about me README prompt](/img/week-1/github/2-self-readme.png)
 
@@ -198,7 +198,7 @@ If you already have a Github.com account, you can create a new Repository with t
 
 ### Making a Repository
 
-We’re going to create our first repository and do our first Github push. From github.com, click the “+” sign in the top-right corner of the screen and click “New repository”
+We're going to create our first repository and do our first Github push. From github.com, click the "+" sign in the top-right corner of the screen and click "New repository"
 
 ![Screenshot of GitHub new repo dropdown](/img/week-1/github/3-new-repo.png)
 
@@ -211,9 +211,9 @@ Click `Create repository`
 ### Connecting to Windows
 
 Return to your Windows server.
-We’re going connect our systems to Github.
+We're going connect our systems to Github.
 
-Open PowerShell as administrator so we can setup our directory for use with Github. Follow these instructions and DO NOT COPY AND PASTE. You’ll need to change certain fields, like your username and email:
+Open PowerShell as administrator so we can setup our directory for use with Github. Follow these instructions and DO NOT COPY AND PASTE. You'll need to change certain fields, like your username and email:
 
 Change dir to the root of C:, then create an it3038c-scripts folder and subfolders with files in them. The commands are:
 

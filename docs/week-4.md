@@ -74,16 +74,16 @@ set-alias touch new-item
 
 At this point you should have a git repo with some files in it. You should at least have a bash and powershell folder, with a script or two in each folder. You've run a few git commands, but let's dig and and really try to understand what's going on here.
 
-Let’s review some common Git commands.
+Let's review some common Git commands.
 
 ```bash
 git init          # Initialize local git repository
 
-git add <file>    # Add files(s) to index.  “.”  will add all files
+git add <file>    # Add files(s) to index.  "."  will add all files
 
 git status        # Check Status of Working Tree
 
-git commit        # Commit changes to “index”
+git commit        # Commit changes to "index"
 
 git push          # Push to Remote Repository
 
@@ -94,7 +94,7 @@ git clone         # Clone repo into a new directory
 git remote        # Manage remote repository
 ```
 
-There are 4 primary git commands. Think of git as if you’re going shopping.
+There are 4 primary git commands. Think of git as if you're going shopping.
 
 `git add` puts items in your shopping cart.
 
@@ -104,7 +104,7 @@ There are 4 primary git commands. Think of git as if you’re going shopping.
 
 `git pull` would be like if your roommate also brought groceries home. Now you both have all the groceries.
 
-In our `it3038c-scripts` directory, create a folder called “testing” and within, create 2 files (app.js, index.html).
+In our `it3038c-scripts` directory, create a folder called "testing" and within, create 2 files (app.js, index.html).
 
 From your it3038c-scripts directory
 
@@ -116,7 +116,7 @@ touch testing/app.js testing/index.html
 git status
 ```
 
-Notice we now have “Untracked” files, meaning that they exist in our git repo, but git is not tracking or handling these files. Let’s add some content to our index.html file. Open it with vim or with your Windows text editor and add the following:
+Notice we now have "Untracked" files, meaning that they exist in our git repo, but git is not tracking or handling these files. Let's add some content to our index.html file. Open it with vim or with your Windows text editor and add the following:
 
 ```html
 <html>
@@ -129,7 +129,7 @@ Notice we now have “Untracked” files, meaning that they exist in our git rep
 </html>
 ```
 
-Save and close the file. Now, let’s add just this html file to our repository
+Save and close the file. Now, let's add just this html file to our repository
 
 ```bash
 git add testing/index.html
@@ -151,7 +151,7 @@ git status
 # app.js
 ```
 
-Notice that we have 1 file to be committed (index.html), and one file that is untracked (app.js). To remove a file from being tracked, run `git rm --cached`. Let’s do that now.
+Notice that we have 1 file to be committed (index.html), and one file that is untracked (app.js). To remove a file from being tracked, run `git rm --cached`. Let's do that now.
 
 ```bash
 git rm –-cached testing/index.html
@@ -159,7 +159,7 @@ git rm –-cached testing/index.html
 git status
 ```
 
-Now both files are untracked again. Let’s create a second index.html file called index2.html and let’s use a wildcard ‘*’ to add both html files back to “shopping cart”
+Now both files are untracked again. Let's create a second index.html file called index2.html and let's use a wildcard '*' to add both html files back to "shopping cart"
 
 ```bash
 cp testing/index.html testing/index2.html
@@ -169,7 +169,7 @@ git add testing/*.html
 git status
 ```
 
-Now you should have 2 .html files, both being tracked. Let’s try deleting index2.html
+Now you should have 2 .html files, both being tracked. Let's try deleting index2.html
 
 ```bash
 rm index2.html
@@ -200,7 +200,7 @@ git status
 # app.js
 ```
 
-Notice our file index2.html is still showing up as “deleted”, so our git repo still knows it’s a thing, even though we deleted it. To remove it from git, we have to run
+Notice our file index2.html is still showing up as "deleted", so our git repo still knows it's a thing, even though we deleted it. To remove it from git, we have to run
 
 ```bash
 git rm --cached testing/index2.html
@@ -224,7 +224,7 @@ git rm -rf index2.html
 
 Now the file is gone and also no longer being tracked by git
 
-Let’s now add the rest of the files to the repo. Do this with
+Let's now add the rest of the files to the repo. Do this with
 
 ```bash
 git add .
@@ -232,7 +232,7 @@ git add .
 git status
 ```
 
-This shows we have both our index.html and app.js files tracked by git. Let’s make a change to index.html
+This shows we have both our index.html and app.js files tracked by git. Let's make a change to index.html
 
 ```html
 <html>
@@ -267,13 +267,13 @@ git status
 # modified:   index.html
 ```
 
-Git is telling us that we have added new files, but also that our index.html file has been modified, so we need to add to our shopping cart to be ‘staged’
+Git is telling us that we have added new files, but also that our index.html file has been modified, so we need to add to our shopping cart to be 'staged'
 
 ```bash
 git add .
 ```
 
-Now let’s commit. This is the “checkout” instance of our shopping analogy
+Now let's commit. This is the "checkout" instance of our shopping analogy
 
 ```bash
 git commit -m 'Initial commit'
@@ -289,7 +289,7 @@ git status
 # nothing to commit, working directory clean
 ```
 
-Let’s edit the app.js file now and add the following:
+Let's edit the app.js file now and add the following:
 
 ```javascript
 Console.log(`Hello`);
@@ -305,13 +305,13 @@ git status
 
 Notice how my comment gives a little hint to what I actually did.
 
-Let’s create a .gitignore file. If you’re working in Windows, you’ll have to add this file via command line, because Windows Explorer won’t let you create a file with ‘.’ In front
+Let's create a .gitignore file. If you're working in Windows, you'll have to add this file via command line, because Windows Explorer won't let you create a file with '.' In front
 
 ```bash
 touch .gitignore
 ```
 
-Let’s create a file to ignore. Something like output.log. First create the file.
+Let's create a file to ignore. Something like output.log. First create the file.
 
 ```bash
 $ touch output.log
@@ -370,13 +370,13 @@ You can also add entire directories the exact same way. Options include
 .pycache
 ```
 
-Let’s talk about branches. A branch is the functionality you would use if working on a team or working by yourself on code that you want to complete before it is merged into the Production code. This allows others to make changes without impacting you, and vice versa. To create a branch, type:
+Let's talk about branches. A branch is the functionality you would use if working on a team or working by yourself on code that you want to complete before it is merged into the Production code. This allows others to make changes without impacting you, and vice versa. To create a branch, type:
 
 ```bash
 git branch dev
 ```
 
-Git branch creates the branch, but doesn’t switch to it. To checkout this branch, do
+Git branch creates the branch, but doesn't switch to it. To checkout this branch, do
 
 ```bash
 git checkout dev
@@ -384,7 +384,7 @@ git checkout dev
 git branch
 ```
 
-You can see the * indicates we are in the ‘dev’ branch. Now create a file called new.js. Edit it and add some text to it.
+You can see the * indicates we are in the 'dev' branch. Now create a file called new.js. Edit it and add some text to it.
 
 ```bash
 vim new.js
@@ -416,19 +416,19 @@ git add .
 git commit -m 'adding new stuff'
 ```
 
-Now let’s switch back to the main branch.
+Now let's switch back to the main branch.
 
 ```bash
 git checkout main
 ```
 
-Notice that all of our changes are gone. That’s because they only exist in the dev branch, but not main. You can freely switch between the two and see the files disappear and reappear.
+Notice that all of our changes are gone. That's because they only exist in the dev branch, but not main. You can freely switch between the two and see the files disappear and reappear.
 
 ```bash
 git checkout dev
 ```
 
-We can also use the git diff command to see what’s changed between the two branches.
+We can also use the git diff command to see what's changed between the two branches.
 
 ```bash
 $ git diff dev main
@@ -456,16 +456,16 @@ index 90bfcb5..0000000
 -this is a test
 ```
 
-It’s not a pretty output, but it works. Now, if we’re done with our new functionality, we can merge our changes from dev to main. From the main branch, git merge dev
+It's not a pretty output, but it works. Now, if we're done with our new functionality, we can merge our changes from dev to main. From the main branch, git merge dev
 
 ```bash
 git checkout main
 git merge dev
 ```
 
-There’s a lot more to branching and merging, so for now, just let’s keep it simple.
+There's a lot more to branching and merging, so for now, just let's keep it simple.
 
-Now, what if we didn’t want to merge those files? If you want to rollback a commit, like before we merged Dev, we can do that with git reset. To rollback a merge, first we need the commit ID, which is an ugly string of letters and numbers. Type
+Now, what if we didn't want to merge those files? If you want to rollback a commit, like before we merged Dev, we can do that with git reset. To rollback a merge, first we need the commit ID, which is an ugly string of letters and numbers. Type
 
 ```bash
 $ git log
@@ -489,7 +489,7 @@ Date:   Tue Feb 6 16:29:32 2018 -0500
     Initial commit
 ```
 
-Grab that “GUID” from the “added .gitignore file” commit. Then do
+Grab that "GUID" from the "added .gitignore file" commit. Then do
 
 ```bash
 git reset –-soft 4c9929c51640b92677c95f6e26f66d6e632a4dae
@@ -508,7 +508,7 @@ git reset --mixed <REF>
 git reset --hard <REF>  # Use with caution Restores everything back to a specific commit. Loses all commits after that occurred after
 ```
 
-If we don’t want the files at all, we can follow up our git reset with a git clean -f
+If we don't want the files at all, we can follow up our git reset with a git clean -f
 
 ```bash
 git clean -f
@@ -518,9 +518,9 @@ That removes all of the files that were left over. Good news is, we still have o
 
 ## README
 
-The README.md file displays on your Github page as an HTML document. It’s a good way to document what your application does and how to use it.
+The README.md file displays on your Github page as an HTML document. It's a good way to document what your application does and how to use it.
 
-Let’s create a sample. Edit README.md and add the following:
+Let's create a sample. Edit README.md and add the following:
 
 ````md
 # MARKDOWN EXAMPLE
@@ -558,7 +558,7 @@ git add .
 git commit -m 'added README.md'
 ```
 
-At this point we have not done anything to our remote branch. Now, we’ll push all the changes we’ve made to our remote branch so it can be viewable on github.com.
+At this point we have not done anything to our remote branch. Now, we'll push all the changes we've made to our remote branch so it can be viewable on github.com.
 
 ```bash
 git push origin main
@@ -573,7 +573,7 @@ git push origin dev
 
 Verify you can see the Dev branch now as well in your github.com page. You can view your README changes on there as well.
 
-README’s can be very helpful for your users and SHOULD be used to let users (and me) know what you’re doing with your scripts. Hey, you can use it for Project 1!
+README's can be very helpful for your users and SHOULD be used to let users (and me) know what you're doing with your scripts. Hey, you can use it for Project 1!
 
 Branching is a valuable feature in git and will allow you to change files without risking overwriting code or functionality.
 
@@ -583,7 +583,7 @@ Switch back to your main branch since that will be the primary branch we use for
 git checkout origin main
 ```
 
-If you’re using Windows, open VS Code and open that folder. You’ll notice there is new highlighting and git options in VS Code, because VS Code knows that this is a git repo.
+If you're using Windows, open VS Code and open that folder. You'll notice there is new highlighting and git options in VS Code, because VS Code knows that this is a git repo.
 
 You can actually do most of your Git work within VS Code without using command line. Just click the Github icon on the left. Click the "+" icon to stage your changes. Click the ✓ to commit and add a message.
 Click the ... and click Push. That's it!

@@ -15,7 +15,7 @@ First, we'll connect to our Linux instance via Putty. If you are NOT using the S
 
 ## Create a User
 
-Quick aside, I hate putting in a password every time I su, so let’s create a user that doesn’t have to do that. To do this, we have to sudo su to root first.
+Quick aside, I hate putting in a password every time I su, so let's create a user that doesn't have to do that. To do this, we have to sudo su to root first.
 Run the following commands from your Linux PuTTY connection
 
 ```bash
@@ -27,7 +27,7 @@ su – reedws
 
 ### Create an SSH Key (Windows)
 
-Now, let’s do one more step to make our lives super easy. As the user you just created. We’re going to ‘key’ our user so that we can login without a password from our Windows machine.
+Now, let's do one more step to make our lives super easy. As the user you just created. We're going to 'key' our user so that we can login without a password from our Windows machine.
 
 On your Windows VM, right-click the PuTTY icon and click Run PuTTYgen
 
@@ -41,7 +41,7 @@ Once finished, select ALL of the text in the window under Public key for pasting
 
 ![Screenshot of OpenSSH Key from PuTTYgen](/img/week-2/putty/4-openssh-key.png)
 
-Click “Save public key” and “Save private key”. Click “Yes” that you are sure you want to save without a passphrase.
+Click "Save public key" and "Save private key". Click "Yes" that you are sure you want to save without a passphrase.
 Save them to a location like C:\ssh_keys\
 Give the file name your username, reedws.pub and reedws.ppk respectively.
 
@@ -58,7 +58,7 @@ Press the 'i' key within VIM to enter *INSERT* mode, then paste the contents of 
 
 Save and quit the file by pressing `esc` and entering `:wq` (write and quit)
 
-Now it’s not enough to just have the file, we also need to set permissions on it. Change the perms to 700 for .ssh folder and 600 for the authorized_keys file, that is, read and write for ONLY the owner of the file:
+Now it's not enough to just have the file, we also need to set permissions on it. Change the perms to 700 for .ssh folder and 600 for the authorized_keys file, that is, read and write for ONLY the owner of the file:
 
 ```bash
 chmod 700 ~/.ssh
@@ -88,7 +88,7 @@ sudo yum -y install git
 
 This command calls the package manager for our system, finds all of the dependencies for Git and installs them.
 
-All we need to do it run 'git –version' to verify it’s working.
+All we need to do it run 'git –version' to verify it's working.
 
 ```bash
 git --version
@@ -144,7 +144,7 @@ git config --global user.email "<your github email>"
 
 ## Bash Commands
 
-Bash is the Bourne Again SHell. Bourne shell is the original sh shell that we see on many systems. Bash became the default on Unix V7. Let’s run a few basic commands.
+Bash is the Bourne Again SHell. Bourne shell is the original sh shell that we see on many systems. Bash became the default on Unix V7. Let's run a few basic commands.
 
 ---
 
@@ -170,13 +170,13 @@ $ pwd
 /home/<username>
 ```
 
-If you’re not in your home directory,
+If you're not in your home directory,
 
 ```bash
 cd ~
 ```
 
-Let’s do some basic file manipulation. First, let’s create a directory called playground and cd into that directory.
+Let's do some basic file manipulation. First, let's create a directory called playground and cd into that directory.
 
 ```bash
 $ mkdir playground
@@ -198,7 +198,7 @@ You can create several files by passing in a parameter multiple times
 touch 1.txt 2.txt 3.txt
 ```
 
-You can create several files using “Brace Expansion”
+You can create several files using "Brace Expansion"
 
 ```bash
 touch file_{1..100}.txt
@@ -238,7 +238,7 @@ Clear the terminal window
 clear
 ```
 
-Count from x to y by z’s {x..y..z}
+Count from x to y by z's {x..y..z}
 
 ```bash
 $ echo {0..10..2}
@@ -280,19 +280,19 @@ ls | grep hello
 
 Filtering results with grep:
 
-Run a ‘cat’ command on /var/log/secure to get a list of recent authentications
+Run a 'cat' command on /var/log/secure to get a list of recent authentications
 
 ```bash
 sudo cat /var/log/secure
 ```
 
-Now apply a GREP filter to it. Let’s find all instances of student
+Now apply a GREP filter to it. Let's find all instances of student
 
 ```bash
 sudo cat /var/log/secure | grep student
 ```
 
-That’s quite a bit of data. Let’s find specifically any time root was impersonated
+That's quite a bit of data. Let's find specifically any time root was impersonated
 
 ```bash
 sudo cat /var/log/secure | grep 'session opened for user root'
@@ -303,13 +303,13 @@ This is much more readable…
 ### AWK
 
 You can use AWK to filter results as well. Take our `ll` command as example.
-If you count the columns, you’ll see there are 9 total. We can use AWK to only print certain columns
+If you count the columns, you'll see there are 9 total. We can use AWK to only print certain columns
 
 ```bash
 ll | awk '{print $9}'
 ```
 
-Combining Grep and AWK commands, we can get specific data from a command like our cat command above. Let’s see if we can extract the date and time and username only from our secure log file.
+Combining Grep and AWK commands, we can get specific data from a command like our cat command above. Let's see if we can extract the date and time and username only from our secure log file.
 
 ```bash
 sudo cat /var/log/secure | grep student | awk '{print $1 $2 $3 $13}'
@@ -321,19 +321,19 @@ Not bad. If we want to make this a little prettier, simply added empty quotation
 sudo cat /var/log/secure | grep student | awk '{print $1 " " $2 " " $3 " " $13}'
 ```
 
-Let’s apply this filter to another command: `ip a`
+Let's apply this filter to another command: `ip a`
 
 ```bash
 ip a
 ```
 
-We want to grab the primary IP address of this machine, so we have to find out what makes a single line distinct for this. We can see that ens192 is the name of our connection, so let’s GREP on that
+We want to grab the primary IP address of this machine, so we have to find out what makes a single line distinct for this. We can see that ens192 is the name of our connection, so let's GREP on that
 
 ```bash
 ip a | grep 'ens192'
 ```
 
-Better, but we’re still grabbing an extra line. Let’s add one more qualifier to our grep command to get a single line. Looks like if we grab noprefixroute ens192” we’ll get our single line output.
+Better, but we're still grabbing an extra line. Let's add one more qualifier to our grep command to get a single line. Looks like if we grab noprefixroute ens192" we'll get our single line output.
 
 ```bash
 ip a | grep 'noprefixroute ens192'
@@ -349,7 +349,7 @@ Excellent, we just grabbed our IP (with subnet mask) using simple BASH commands.
 
 ### Other Commands
 
-Here are some other commands we’ll be using in our first script
+Here are some other commands we'll be using in our first script
 Date lets you manipulate date data
 
 ```bash
@@ -375,9 +375,9 @@ Name: reedws
 ```
 
 This is ok, but we can do better.
-printf let’s us create simple, formatted strings that you can pass variables into our strings. \t is a tab, %s denotes a string for our variable that we pass as $USER, \n is a new line.
+printf let's us create simple, formatted strings that you can pass variables into our strings. \t is a tab, %s denotes a string for our variable that we pass as $USER, \n is a new line.
 
-Let’s see if we can make the above statement prettier with printf
+Let's see if we can make the above statement prettier with printf
 
 ```bash
 $ printf "Name: %s" $USER
@@ -409,7 +409,7 @@ Start file with "sha-bang"
 #!/bin/bash
 
 # This script outputs the IP address and Hostname of a machine
-echo ‘This is a script. Hello!’
+echo 'This is a script. Hello!'
 ```
 
 Press ESC to exit `INSERT` mode to Save and exit vim
@@ -421,7 +421,7 @@ Try to run the script:
 ./myFirstScript.sh
 ```
 
-You’ll get a permissions error. That’s because we don’t have execute on the script. Grant execute permissions with the following command:
+You'll get a permissions error. That's because we don't have execute on the script. Grant execute permissions with the following command:
 
 ```bash
 $ chmod +x myFirstScript.sh
@@ -501,7 +501,7 @@ Home Dir: /home/reedws
 Reopen your script and add the following lines:
 
 ```bash
-a=$(ip a | grep 'noprefixroute ens192'| awk ‘{print $2}’)
+a=$(ip a | grep 'noprefixroute ens192'| awk '{print $2}')
 echo My IP is $a
 ```
 

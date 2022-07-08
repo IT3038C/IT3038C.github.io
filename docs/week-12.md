@@ -5,7 +5,7 @@ sidebar_position: 12
 
 # Week 12 – Websites in Python using Flask
 
-In this lab, we’ll create a simple web application using Python Flask.
+In this lab, we'll create a simple web application using Python Flask.
 
 Flask allows you to use Python to create web apps similar to the way NodeJS does.
 
@@ -35,7 +35,7 @@ def hello():
     return 'Hello, World!'
 ```
 
-Let’s create our Flask venv.
+Let's create our Flask venv.
 
 Here is a shortcut:
 
@@ -63,11 +63,11 @@ python web.py
 
 Open a web browser and browse to <http://localhost:5000>
 
-You should see a “Hello, World” page. That’s it! You’ve just created a Flask app. Of course, that’s only the beginning. Let’s see what other options we have.
+You should see a "Hello, World" page. That's it! You've just created a Flask app. Of course, that's only the beginning. Let's see what other options we have.
 
-Let’s create another route called `/welcome`
+Let's create another route called `/welcome`
 
-There are a few things we’re going to add to this. First, let’s add a template. To add a template, create a new folder called `templates`.
+There are a few things we're going to add to this. First, let's add a template. To add a template, create a new folder called `templates`.
 
 Within this folder, create a file called `layout.html`
 
@@ -86,7 +86,7 @@ Add the following code:
 </html>
 ```
 
-Let’s create Another file in our templates folder called `welcome.html`
+Let's create Another file in our templates folder called `welcome.html`
 
 ```html
 {% extends "layout.html" %}
@@ -108,7 +108,7 @@ def welcome():
 
 Run the app and go to the welcome page <http://localhost:5000/welcome>
 
-OOPS! We got an error. Let’s turn on debugging and try to solve this issue.
+OOPS! We got an error. Let's turn on debugging and try to solve this issue.
 
 Open `web.py`
 
@@ -134,9 +134,9 @@ Ahh, notice your command line. Since we are using the `Debug=True` flag, our pro
 
 Open <http://localhost:5000/welcome>
 
-There are a few takeaways here, which I’ll highlight by making some additional changes to our file.
+There are a few takeaways here, which I'll highlight by making some additional changes to our file.
 
-Within `@app.route(‘/’)`, change the it to the following:
+Within `@app.route('/')`, change the it to the following:
 
 ```python
 @app.route('/')
@@ -145,7 +145,7 @@ def hello():
    return render_template("index.html", value=name)
 ```
 
-Please note the added variable `name` with a value. Also notice that we’ve added the `render_template` function, passing the name of our template and a value of the variable. Let’s see what we can do with this.
+Please note the added variable `name` with a value. Also notice that we've added the `render_template` function, passing the name of our template and a value of the variable. Let's see what we can do with this.
 
 From the templates folder, create a file called `index.html`
 
@@ -160,9 +160,9 @@ Add the following content:
 
 Save this file and browse to `http://localhost:5000`
 
-A few things to notice: first, our header is the same, since it inherits from the layout.html template, same as our welcome.html page. Second, our variable is displayed on the page. This opens a few doors of possibility for us. Let’s expand on this a bit more. I want the user to input the name themselves, and then display it. There are a few ways to do this.
+A few things to notice: first, our header is the same, since it inherits from the layout.html template, same as our welcome.html page. Second, our variable is displayed on the page. This opens a few doors of possibility for us. Let's expand on this a bit more. I want the user to input the name themselves, and then display it. There are a few ways to do this.
 
-Let’s first create a form. Open `index.html` and change it to the following:
+Let's first create a form. Open `index.html` and change it to the following:
 
 ```html
 {% extends "layout.html" %}
@@ -173,9 +173,9 @@ Let’s first create a form. Open `index.html` and change it to the following:
 {% endblock %}
 ```
 
-Notice our form action points to `/welcome`. This means we’re going to have to make changes to the `/welcome` route AND the `welcome.html` template. Let’s change the route first.
+Notice our form action points to `/welcome`. This means we're going to have to make changes to the `/welcome` route AND the `welcome.html` template. Let's change the route first.
 
-First, comment out our name variable from our “/” route, we don’t need it anymore.
+First, comment out our name variable from our "/" route, we don't need it anymore.
 Open `routes.py`
 
 ```python
@@ -219,7 +219,7 @@ Congrats! You just created your first flask app. Feel free to add on to this, ad
 Check out <https://github.com/miguelgrinberg/microblog/tree/v0.1> which is the official flask tutorial. This application is called flaskr, a microblog built in flask.
 Follow the README on instructions on how to run this.
 
-Once it’s running, take a look at the application. Create an account, login and create a post. Delete or edit the post. Continue until you feel comfortable with the application. Take a look at the code. Locate the routes for each type of request, like add, edit, update, and delete.
+Once it's running, take a look at the application. Create an account, login and create a post. Delete or edit the post. Continue until you feel comfortable with the application. Take a look at the code. Locate the routes for each type of request, like add, edit, update, and delete.
 
 ## Lab 11
 
