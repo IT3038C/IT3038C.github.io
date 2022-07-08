@@ -1,8 +1,8 @@
 ---
-title: Lab 9 – Working with APIs
+title: Week 9 – Working with APIs
 ---
 
-# Lab 9 - Working with APIs
+# Week 9 - Working with APIs
 
 Links:
 

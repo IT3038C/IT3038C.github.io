@@ -1,8 +1,8 @@
 ---
-title: Lab 2 – Bash Crash Course
+title: Week 2 – Bash
 ---
 
-# Lab 2 - Bash Crash Course
+# Week 2 - Bash
 
 If you do not have your GitHub account setup, please do that now.
 
@@ -10,7 +10,7 @@ If you do not have your GitHub account setup, please do that now.
 
 First, we'll connect to our Linux instance via Putty. If you are NOT using the Sandbox environment, then you just need to connect via SSH to your Linux machine.
 
-![Screenshot of PuTTY Configuration](/img/lab-2/putty/1-configuration.png)
+![Screenshot of PuTTY Configuration](/img/week-2/putty/1-configuration.png)
 
 ## Create a User
 
@@ -30,15 +30,15 @@ Now, let’s do one more step to make our lives super easy. As the user you just
 
 On your Windows VM, right-click the PuTTY icon and click Run PuTTYgen
 
-![Screenshot of Run PuTTYgen menu](/img/lab-2/putty/2-run-puttygen.png)
+![Screenshot of Run PuTTYgen menu](/img/week-2/putty/2-run-puttygen.png)
 
 Click Generate and move the mouse until the bar is full. This will generate a unique key.
 
-![Screenshot of PuTTYgen create screen](/img/lab-2/putty/3-puttygen-create.png)
+![Screenshot of PuTTYgen create screen](/img/week-2/putty/3-puttygen-create.png)
 
 Once finished, select ALL of the text in the window under Public key for pasting into OpenSSH
 
-![Screenshot of OpenSSH Key from PuTTYgen](/img/lab-2/putty/4-openssh-key.png)
+![Screenshot of OpenSSH Key from PuTTYgen](/img/week-2/putty/4-openssh-key.png)
 
 Click “Save public key” and “Save private key”. Click “Yes” that you are sure you want to save without a passphrase.
 Save them to a location like C:\sshkeys\
@@ -69,11 +69,11 @@ Return to the base PuTTY window. For hostname, enter `username@192.168.33.XX` wh
 On the left side, under Connections, click SSH | Auth (select Auth, do not click +)
 Click Browse and add your SSH Private Key
 
-![Screenshot of PuTTY auth config](/img/lab-2/putty/5-private-key-auth.png)
+![Screenshot of PuTTY auth config](/img/week-2/putty/5-private-key-auth.png)
 
 Return to the Session tab and save the session by entering a session name and clicking Save
 
-![Screenshot of PuTTY config window with saved connections](/img/lab-2/putty/6-save-config.png)
+![Screenshot of PuTTY config window with saved connections](/img/week-2/putty/6-save-config.png)
 
 Now, click Open to open the session. You should be connected as a user, with root access, no password needed. Make sure you can `sudo su` as well.
 
@@ -115,7 +115,7 @@ Give it a friendly name (sandbox) then paste the contents of the file above and 
 
 Return to your repo in Github. Click the code button and copy the "SSH" clone location:
 
-![Screenshot of GitHub clone via ssh option](/img/lab-2/github/1-clone-ssh.png)
+![Screenshot of GitHub clone via ssh option](/img/week-2/github/1-clone-ssh.png)
 
 Make sure it starts with git@github.com
 

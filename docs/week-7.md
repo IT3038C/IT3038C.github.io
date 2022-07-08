@@ -1,8 +1,8 @@
 ---
-title: Lab 7 - Modules, Plugins, Debugging
+title: Week 7 - Modules, Plugins, Debugging
 ---
 
-# Lab 7 - Modules, Plugins, Debugging
+# Week 7 - Modules, Plugins, Debugging
 
 List of Links for this week:
 

@@ -59,7 +59,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'lab-1',
+            docId: 'week-1',
             position: 'left',
             label: 'Labs',
           },

@@ -1,7 +1,7 @@
 ---
-title: Lab 6 – Node JS
+title: Week 6 – Node JS
 ---
-# Lab 6 - Node JS
+# Week 6 - Node JS
 
 List of Links for this week:
 Lynda - <https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training/417077-2.html>
@@ -438,4 +438,4 @@ For our assignment, we’ll be filling in the blanks on our sysinfo page above.
 
 Here is a sample page:
 
-![Screenshot of sample HTML page](/img/lab-6/1-server-example-page.png)
+![Screenshot of sample HTML page](/img/week-6/1-server-example-page.png)

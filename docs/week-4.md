@@ -1,8 +1,8 @@
 ---
-title: Lab 4 – Git and GitHub
+title: Week 4 – Git and GitHub
 ---
 
-# Lab 4 – Git and GitHub
+# Week 4 – Git and GitHub
 
 List of Links for this Week:
 

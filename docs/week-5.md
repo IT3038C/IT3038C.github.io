@@ -1,8 +1,8 @@
 ---
-title: Lab 5 – Python
+title: Week 5 – Python
 ---
 
-# Lab 5 – Python
+# Week 5 – Python
 
 List of Links for this week:
 

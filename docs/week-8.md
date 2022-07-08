@@ -1,8 +1,8 @@
 ---
-title: Lab 8 – Web Scraping
+title: Week 8 – Web Scraping
 ---
 
-# Lab 8 – Web Scraping
+# Week 8 – Web Scraping
 
 ## Python Data Storage Types
 

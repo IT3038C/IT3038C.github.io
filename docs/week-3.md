@@ -1,8 +1,8 @@
 ---
-title: Lab 3 – PowerShell
+title: Week 3 – PowerShell
 ---
 
-# Lab 3 - PowerShell
+# Week 3 - PowerShell
 
 ## List of Links for this week
 
@@ -22,7 +22,7 @@ Take note that PowerShell is also available for other Oss.
 
 We now have TWO versions of PowerShell installed on our server. PowerShell (v5) and PowerShell Core (v7). Both are still accessible. From the start menu, the default PowerShell Icon will launch PowerShell (v5). Search for ‘pwsh’ to find PowerShell Core. Feel free to pin both of these to the task bar.
 
-![Both PowerShell icons side by side](/img/lab-3/1-powershell-icons.png)
+![Both PowerShell icons side by side](/img/week-3/1-powershell-icons.png)
 
 Left is the delivered PowerShell (v5), right is PowerShell Core (v6)
 
@@ -230,7 +230,7 @@ Note: PowerShell Core does not use ISE. It is compatible with VS Code, however, 
 
 In ISE, click the “Show Script Pane Top”
 
-![Screenshot of Powershell ISE Show Script Pane Top button](/img/lab-3/2-powershell-ise.png)
+![Screenshot of Powershell ISE Show Script Pane Top button](/img/week-3/2-powershell-ise.png)
 
 ### Working with Output
 
@@ -285,7 +285,7 @@ $Hello = "Hello, PowerShell"
 Write-Host($Hello)
 ```
 
-![Screenshot of Powershell ISE Run button](/img/lab-3/3-powershell-ise-run.png)
+![Screenshot of Powershell ISE Run button](/img/week-3/3-powershell-ise-run.png)
 
 F5 or the green arrow will run the script.
 
@@ -423,7 +423,7 @@ Go to <https://myaccount.google.com/apppasswords> and login with your Google acc
 
 Select an app (Mail) and a device (Other) and type “PowerShell SMTP” and click GENERATE
 
-![Screenshot of Gmail App Password Page](/img/lab-3/4-gmail-app-password.png)
+![Screenshot of Gmail App Password Page](/img/week-3/4-gmail-app-password.png)
 
 The displayed password can be used to authenticate your email messages when sent. Using Get-Credential will ask PowerShell to prompt you for login. This is the time you will put in your Google username and app password.
 
@@ -437,7 +437,7 @@ Graphical user interface, text, application, email
 
 Description automatically generated
 
-![Screenshot of Gmail Setting for Less Secure Apps](/img/lab-3/5-gmail-less-secure-app.png)
+![Screenshot of Gmail Setting for Less Secure Apps](/img/week-3/5-gmail-less-secure-app.png)
 
 __WARNING__: DO NOT LEAVE THIS ENABLED. Once you finish the lab, please disable this.
 
