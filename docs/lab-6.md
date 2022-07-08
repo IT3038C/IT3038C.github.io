@@ -1,7 +1,7 @@
 ---
-title: Lab 6 – Node JS Crash Course
+title: Lab 6 – Node JS
 ---
-# Lab 6 - Node JS Crash Course
+# Lab 6 - Node JS
 
 List of Links for this week:
 Lynda - <https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training/417077-2.html>
