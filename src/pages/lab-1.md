@@ -16,31 +16,31 @@ First, login to <https://sandbox02.cech.uc.edu/vcac/>
 
 Select the domain “ad.uc.edu” and click Next.
 
-![](/img/lab-1/sandbox/1-sandbox-login-1.png)
+![Screenshot of Sandbox login domain selection](/img/lab-1/sandbox/1-login-1.png)
 
 Sign in with your UC username and password.
 
-![](/img/lab-1/sandbox/2-sandbox-login-2.png)
+![Screenshot of Sandbox login page](/img/lab-1/sandbox/2-login-2.png)
 
 Click the “Deployments” tab, which will contain all of your requests. Select your “Scripting Language” Deployment
 
-![](/img/lab-1/sandbox/3-sandbox-deployments.png)
+![Screenshot of Sandbox Deployments page for IT3038C](/img/lab-1/sandbox/3-deployments.png)
 
 ## Linux Setup and Validation
 
 Let’s select the CentOS server first. Hover over the machine and click the blue gear icon. Click “Connect Using Remote Console”
 
-![](/img/lab-1/sandbox/4-sandbox-connect-console.png)
+![Screenshot of Sandbox connect to console dropdown for CentOS](/img/lab-1/sandbox/4-connect-console-centos.png)
 
 Click into the window and press `ENTER` to show the login prompt.
 Login using the following credentials:
 
 - Localhost login: `student`
-- Password:`Pa$$w0rd`
+- Password: `Pa$$w0rd`
 
 Click Applications | Terminal
 
-![](/img/lab-1/centos/1-apps-menu.png)
+![Screenshot of CentOS applications menu](/img/lab-1/centos/1-apps-menu.png)
 
 Go ahead and run this command:
 
@@ -65,14 +65,14 @@ ip a
 
 You should see results similar to what’s below.
 
-![](/img/lab-1/centos/2-terminal-ip-cmd.png)
+![Screenshot of result of ip a command](/img/lab-1/centos/2-terminal-ip-cmd.png)
 
-While we’re at it, let’s go ahead and change the hostname of your Linux VM. Call is the same name you called your VM when we provisioned it (eg. botheaj-centos)
+While we’re at it, let’s go ahead and change the hostname of your Linux VM. Call is the same name you called your VM when we provisioned it (eg. reedws-centos)
 
 To change it,
 
 ```bash
-hostnamectl set-hostname botheaj-centos
+hostnamectl set-hostname reedws-centos ### replace reedws with your username
 ```
 
 Follow this up with a reboot to finalize both our network and hostname settings.
@@ -87,17 +87,16 @@ That’ll do it for our CentOS setup for now. Let’s switch to Windows.
 
 Click the Blue Gear icon next to our Windows machine. Again, click “Connect using Remote Console”
 
- ![](/img/screenshots/21-08-28-11-39-07.png)
+![Screenshot of Sandbox connect to console dropdown for Windows](/img/lab-1/sandbox/5-connect-console-win.png)
 
-At the login prompt, login as
+At the login prompt, login as:
 
-`User: Administrator`
-
-`Password: Pa$$w0rd`
+- User: `Administrator`
+- Password:`Pa$$w0rd`
 
 Click the Start Menu and type PowerShell to launch the PowerShell window.
 
-![](/img/screenshots/21-08-28-11-39-15.png)
+![Screenshot of Windows Start Menu with search for "po"](/img/lab-1/windows/1-start-menu-powershell.png)
 
 First, confirm we have an IP address.
 
@@ -105,7 +104,7 @@ First, confirm we have an IP address.
 ipconfig
 ```
 
- ![](/img/screenshots/21-08-28-11-39-23.png)
+![Screenshot of result of ipconfig command](/img/lab-1/windows/2-ipconfig-cmd.png)
 
 Also confirm we can ping a website.
 
@@ -113,20 +112,20 @@ Also confirm we can ping a website.
 ping www.uc.edu
  ```
 
-![](/img/screenshots/21-08-28-11-40-00.png)
+![Screenshot of result of ping command for uc.edu](/img/lab-1/windows/3-ping-uc-cmd.png)
 
 And why don’t we confirm that we can ping our linux machine. You can get the IP address from the ip addr command that we ran above (hint: it starts with 192.)
 
 ```powershell
-ping 192.168.33.4    #this will be different for you.
+ping 192.168.33.4    # This will be different for you
 ```
 
-![](/img/screenshots/21-08-28-11-40-13.png)
+![Screenshot of result of ping command for CentOS](/img/lab-1/windows/4-ping-centos-cmd.png)
 
 Finally, let’s change our Windows hostname as well:
 
 ```powershell
-rename-computer botheaj-win    ###replace botheaj with your username
+rename-computer reedws-win    ### replace reedws with your username
 ```
 
 Now, restart your Windows machine
@@ -137,65 +136,78 @@ shutdown -r
 
 Once rebooted, please take a snapshot of each one of your VMs. From the blue gear menu, click “Create Snapshot”. Give it a name if you want, and click Submit. Do this on both your Windows and Linux VMs.
 
-![](/img/screenshots/21-08-28-11-40-39.png)
+![Screenshot of Sandbox Create Snapshot dropdown](/img/lab-1/sandbox/6-create-snapshot.png)
 
-## Windows Software
+### Windows Software
 
-Let’s install all of the software we’re going to need for our class.
+Let’s install all of the software we’re going to need for our class. Please install all software with it's default options.
 
-Git
-Download and install Git from <https://git-scm.com/download/win>
+#### Git
 
-![Download and install Git from](/img/screenshots/21-08-28-11-40-49.png)
+Download and install Git from <https://git-scm.com/download/win> and choose the link for the 64-bit version.
 
-Download and install VSCode from <https://code.visualstudio.com/download>
+![Screenshot of the 64-bit Git for Windows Setup](/img/lab-1/windows/5-git-download.png)
 
-![Download and install VSCode](/img/screenshots/21-08-28-11-41-11.png)
+#### VS Code
 
-Download and install putty from <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
+Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the 64-bit __System Installer__.
 
-![](/img/screenshots/21-08-28-11-41-25.png)
+![Screenshot of VSCode download page](/img/lab-1/windows/6-vscode-download.png)
+
+#### PuTTY
+
+Download and install putty from <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> and choose the link for the 64-bit x86 version.
+
+![Screenshot of PuTTY download page](/img/lab-1/windows/7-putty-download.png)
 
 After installing, launch Putty.
 
 Remember your Linux IP address? Enter that into your Host Name value in Putty and click Open.
 
-![](/img/screenshots/21-08-28-11-41-34.png)
+![Screenshot of PuTTY configuration page with IP entered](/img/lab-1/putty/1-configuration.png)
 
 Accept the Servers key by clicking Yes.
 
- ![](/img/screenshots/21-08-28-11-41-39.png)
+![Screenshot of PuTTY host key verification warning](/img/lab-1/putty/2-accept-host-key.png)
 
-Login as the cechuser with the password above.
+Login as `cechuser` with the password above.
 
- ![](/img/screenshots/21-08-28-11-41-46.png)
+![Screenshot of PuTTY SSH Login Prompt](/img/lab-1/putty/3-ssh-login.png)
 
 And there you have it. You are now logged in to your Linux machine, no need to use the other console.
 
 ## Github Setup
 
-Now, let’s setup our Github account.
+### Account setup
 
 Open <https://github.com>
-Create an account using YOUR UC email address and call it something like uc-username, for example, I will register with botheaj@mail.uc.edu and username uc-botheaj.
 
- ![](/img/screenshots/21-08-28-11-42-01.png)
+If you already have an account, feel free to use that one. If not, click “Sign up for GitHub”.
+Create an account using your UC email address and create a username, for example, I will register with reedws@mail.uc.edu and username reedws.
+
+![Screenshot of GitHub sign-up page](/img/lab-1/github/1-sign-up.png)
 
 If you’ve never used Github, this is a great opportunity to get familiar with how it works. You can create the initial README.md file to say a little about yourself. Just click the green “Continue” button and start editing.
 
- ![](/img/screenshots/21-08-28-11-42-08.png)
+![Screenshot of about me README prompt](/img/lab-1/github/2-self-readme.png)
 
 If you already have a Github.com account, you can create a new Repository with the same name as your username, then create the README.md file within to update your Github homepage.
 
+(Optional step) As students of UC, you can get GitHub Pro for free by visiting this link: <https://education.github.com/pack>
+
+### Making a Repository
+
 We’re going to create our first repository and do our first Github push. From github.com, click the “+” sign in the top-right corner of the screen and click “New repository”
 
- ![](/img/screenshots/21-08-28-11-42-19.png)
+![Screenshot of GitHub new repo dropdown](/img/lab-1/github/3-new-repo.png)
 
-Name the repository “it3038c-scripts” and leave defaults for everything else.
+Name the repository `it3038c-scripts` and leave defaults for everything else.
 
- ![](/img/screenshots/21-08-28-11-42-27.png)
+![Screenshot of GitHub new repo setup](/img/lab-1/github/4-repo-setup.png)
 
-Click “Create repository”
+Click `Create repository`
+
+### Connecting to Windows
 
 Return to your Windows server.
 We’re going connect our systems to Github.
@@ -222,21 +234,20 @@ git remote add origin https://github.com/<your-username>/it3038c-scripts.git
 git config --global user.email "<your-github-email>"
 git config --global user.name "<your-github-username>"
 git add .
-git commit -m'first commit'
+git commit -m 'first commit'
 git checkout -b main
 git branch -d master
 git push origin main
 ```
 
-`
 Login with your github.com credentials.
 If you followed all of these steps correctly, you will see your two folders that you just created in your repo on github.com.
 
-## Completing LAB 1
+## Completing Lab 1
 
 Return to Canvas:
 
 Under Assignments within Module 1, select Lab 1. Enter a text submission with a link to your Github account in this format:
-Link to Github.com: <https://github.com/>your username
+Link to Github.com: <https://github.com/your-username>
 
 Your Github.com page should contain the it3038c-scripts repository which contains the PowerShell and Bash folders.
