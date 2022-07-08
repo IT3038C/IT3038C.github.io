@@ -2,7 +2,7 @@
 title: Lab 2 – Bash Crash Course
 ---
 
-# Lab 2: Bash Crash Course
+# Lab 2 - Bash Crash Course
 
 If you do not have your GitHub account setup, please do that now.
 
