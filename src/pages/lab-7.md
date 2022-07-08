@@ -344,4 +344,4 @@ Using the language of your choice, research a plugin that you might find useful.
 
 Write a script that uses that plugin and include at least 3 different usages of the plugin that you’ve selected. For example, if you’ve selected to use Pillow, a Python plugin for manipulating images, give 3 different examples of tasks you can use this plugin for, like blurring an image, creating a thumbnail or applying a filter.
 
-Once you’ve written a script that shows these examples, create another `README.md` file in the `Labs` folder that tells me how to install the modules and run the script you created. [Here is an example of what I'm looking for in the README](./Lab7Example.md)
+Once you’ve written a script that shows these examples, create another `README.md` file in the `Labs` folder that tells me how to install the modules and run the script you created. [Here is an example of what I'm looking for in the README](https://github.com/reedws/IT3038C/blob/main/src/pages/lab-7-example.md)
