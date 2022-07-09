@@ -289,6 +289,8 @@ git status
 # nothing to commit, working directory clean
 ```
 
+![XDCD Git Comic](https://imgs.xkcd.com/comics/git_commit.png)
+
 Let's edit the app.js file now and add the following:
 
 ```javascript
