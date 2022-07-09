@@ -2,7 +2,6 @@
 title: Week 11 – Heroku
 sidebar_position: 11
 ---
-# Week 11 – Heroku
 
 List of Links for this week
 

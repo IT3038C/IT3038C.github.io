@@ -3,8 +3,6 @@ title: Week 12 – Websites in Python using Flask
 sidebar_position: 12
 ---
 
-# Week 12 – Websites in Python using Flask
-
 In this lab, we'll create a simple web application using Python Flask.
 
 Flask allows you to use Python to create web apps similar to the way NodeJS does.

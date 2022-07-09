@@ -3,8 +3,6 @@ title: Week 7 - Modules, Plugins, Debugging
 sidebar_position: 7
 ---
 
-# Week 7 - Modules, Plugins, Debugging
-
 List of Links for this week:
 
 * <https://code.visualstudio.com/docs/editor/debugging>

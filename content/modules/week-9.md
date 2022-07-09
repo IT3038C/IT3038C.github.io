@@ -3,8 +3,6 @@ title: Week 9 – Web Scraping Part 2
 sidebar_position: 9
 ---
 
-# Week 9 - Web Scraping Part 2
-
 Links:
 
 * Regex Cheat Sheet - <https://www.debuggex.com/cheatsheet/regex/python>

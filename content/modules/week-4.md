@@ -3,8 +3,6 @@ title: Week 4 – Git and GitHub
 sidebar_position: 4
 ---
 
-# Week 4 – Git and GitHub
-
 List of Links for this Week:
 
 * Git Branching: <https://learngitbranching.js.org/>

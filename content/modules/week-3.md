@@ -3,8 +3,6 @@ title: Week 3 – PowerShell
 sidebar_position: 3
 ---
 
-# Week 3 - PowerShell
-
 ## List of Links for this week
 
 PowerShell Core Download - <https://github.com/PowerShell/PowerShell>

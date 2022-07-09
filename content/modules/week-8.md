@@ -3,8 +3,6 @@ title: Week 8 – Web Scraping Part 1
 sidebar_position: 8
 ---
 
-# Week 8 – Web Scraping Part 1
-
 ## Python Data Storage Types
 
 Let's talk briefly to clear up some of the python data types that might be a bit confusing to those of you who are new to Python.

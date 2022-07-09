@@ -3,8 +3,6 @@ title: Writing Scripts with Go(lang)
 sidebar_position: 14
 ---
 
-# Writing Scripts with Go(lang)
-
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
 The easiest way to run and test Go is to use the [Go Playground](https://play.golang.org/p/MAohLsrz7JQ)

@@ -3,8 +3,6 @@ title: Week 1 – Getting Started with your VMs
 sidebar_position: 1
 ---
 
-# Week 1 – Getting Started with your VMs
-
 ## Introduction
 
 This lab will get you familiar with the VM Sandbox environment, creating a CentOS VM and a Window VM.

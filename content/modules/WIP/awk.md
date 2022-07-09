@@ -3,8 +3,6 @@ title: AWK Command
 sidebar_position: 13
 ---
 
-# AWK Command
-
 List of Links for this week:
 
 * <https://www.lynda.com/Linux-tutorials/Using-awk-advanced-text-processing/604236/642385-4.html>

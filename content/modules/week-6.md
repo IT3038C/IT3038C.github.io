@@ -2,7 +2,6 @@
 title: Week 6 – Node JS
 sidebar_position: 6
 ---
-# Week 6 - Node JS
 
 List of Links for this week:
 Lynda - <https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training/417077-2.html>
@@ -429,6 +428,7 @@ For our assignment, we'll be filling in the blanks on our sysinfo page above.
 ## Lab 6
 
 Create a Node web server and display the following data:
+
 - In addition to the hostname and IP as shown above, add in the server uptime in Days, Hours, Minutes, Seconds (as in the sample below), Total Memory in MB, Free Memory in MB, and Number of CPUs.
 - Use <https://nodejs.org/api/os.html> for more info.
 - Some *HINTS*:

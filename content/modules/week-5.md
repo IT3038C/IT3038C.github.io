@@ -3,8 +3,6 @@ title: Week 5 – Python
 sidebar_position: 5
 ---
 
-# Week 5 – Python
-
 List of Links for this week:
 
 - Python <https://www.lynda.com/Python-tutorials/Learning-Python-3-Standard-Library/550133-2.html>

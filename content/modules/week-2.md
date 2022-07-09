@@ -3,8 +3,6 @@ title: Week 2 – Bash
 sidebar_position: 2
 ---
 
-# Week 2 - Bash
-
 If you do not have your GitHub account setup, please do that now.
 
 ## PuTTY
