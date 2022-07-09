@@ -8,7 +8,7 @@ List of Links for this week
 
 * <https://www.heroku.com/>
 
-## Setting up Herkou
+## Setting up Heroku
 
 Let's create a Heroku account. To do this, click the link above and create follow the instructions to create an account. Windows or Linux is fine. I'm using Windows because a lot of browser work will need to happen.
 
