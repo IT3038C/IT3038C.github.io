@@ -257,7 +257,7 @@ Reopen the application and verify it looks similar to this.
 
 ![Screenshot of app running on Heroku](/img/week-11/4-running-app-heroku.png)
 
-Lab 10
+## Lab 10
 
 Using the code you wrote for Lab 9, create a new route at /api that includes the content of the file widgets.json we used last week. Submit the URL of your Heroku app that returns the contents of widgets.json at /api
 
