@@ -1,6 +1,7 @@
 ---
-title: Week 3 – PowerShell
+title: Module 3 – PowerShell
 sidebar_position: 3
+slug: /3
 ---
 
 ## List of Links for this week

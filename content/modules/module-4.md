@@ -1,6 +1,7 @@
 ---
-title: Week 4 – Git and GitHub
+title: Module 4 – Git and GitHub
 sidebar_position: 4
+slug: /4
 ---
 
 List of Links for this Week:

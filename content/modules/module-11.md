@@ -1,6 +1,7 @@
 ---
-title: Week 11 – Heroku
+title: Module 11 – Heroku
 sidebar_position: 11
+slug: /11
 ---
 
 List of Links for this week

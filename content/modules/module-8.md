@@ -1,6 +1,7 @@
 ---
-title: Week 8 – Web Scraping Part 1
+title: Module 8 – Web Scraping Part 1
 sidebar_position: 8
+slug: /8
 ---
 
 ## Python Data Storage Types

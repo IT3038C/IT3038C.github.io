@@ -1,6 +1,7 @@
 ---
-title: Week 2 – Bash
+title: Module 2 – Bash
 sidebar_position: 2
+slug: /2
 ---
 
 If you do not have your GitHub account setup, please do that now.

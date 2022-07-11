@@ -1,6 +1,7 @@
 ---
-title: Week 1 – Getting Started with your VMs
+title: Module 1 – Getting Started with your VMs
 sidebar_position: 1
+slug: /1
 ---
 
 ## Introduction

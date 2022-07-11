@@ -1,6 +1,7 @@
 ---
-title: Week 6 – Node JS
+title: Module 6 – Node JS
 sidebar_position: 6
+slug: /6
 ---
 
 List of Links for this week:

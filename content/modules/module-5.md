@@ -1,6 +1,7 @@
 ---
-title: Week 5 – Python
+title: Module 5 – Python
 sidebar_position: 5
+slug: /5
 ---
 
 List of Links for this week:

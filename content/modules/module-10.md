@@ -1,6 +1,7 @@
 ---
-title: Week 10 – Working with APIs
+title: Module 10 – Working with APIs
 sidebar_position: 10
+slug: /10
 ---
 
 List of Links for this week

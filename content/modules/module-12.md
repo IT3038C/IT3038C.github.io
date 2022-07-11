@@ -1,6 +1,7 @@
 ---
-title: Week 12 – Websites in Python using Flask
+title: Module 12 – Websites in Python using Flask
 sidebar_position: 12
+slug: /12
 ---
 
 In this lab, we'll create a simple web application using Python Flask.
