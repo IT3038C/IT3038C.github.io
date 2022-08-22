@@ -170,7 +170,7 @@ Accept the Servers key by clicking Yes.
 
 ![Screenshot of PuTTY host key verification warning](/img/week-1/putty/2-accept-host-key.png)
 
-Login as `cechuser` with the password above.
+Login as `student` with the password above.
 
 ![Screenshot of PuTTY SSH Login Prompt](/img/week-1/putty/3-ssh-login.png)
 
