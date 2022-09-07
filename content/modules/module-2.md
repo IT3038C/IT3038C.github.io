@@ -356,11 +356,11 @@ $ date
 
 Fri Jan 29 11:11:11 EDT 2021
 
-$ date + "%d-%m-%Y"
+$ date +"%d-%m-%Y"
 
 29-01-2021
 
-$ date + "%H:%M:%S"
+$ date +"%H:%M:%S"
 
 12:34:56
 ```
