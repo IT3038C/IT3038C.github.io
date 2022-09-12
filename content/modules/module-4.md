@@ -10,6 +10,7 @@ List of Links for this Week:
 * Git Markdown Cheatsheet: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
 
 ![XDCD Git Comic](https://imgs.xkcd.com/comics/git.png)
+![Git Workflow](/img/git_workflow.png)
 
 ## Important note on Git vs GitHub
 
