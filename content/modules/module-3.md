@@ -18,7 +18,7 @@ To get the latest release of PowerShell Core, you have to pull it from github. Y
 
 Use the MSI download for Windows to install. (PowerShell-7.x.x-win-x64.msi)
 
-Take note that PowerShell is also available for other Oss.
+Take note that PowerShell is also available for other OSs.
 
 We now have TWO versions of PowerShell installed on our server. PowerShell (v5) and PowerShell Core (v7). Both are still accessible. From the start menu, the default PowerShell Icon will launch PowerShell (v5). Search for 'pwsh' to find PowerShell Core. Feel free to pin both of these to the task bar.
 
