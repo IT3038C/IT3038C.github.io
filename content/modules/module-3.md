@@ -417,7 +417,7 @@ Office365 will sometimes let you send email, in which case you can use smtp.offi
 
 ### Using Gmail SMTP Server
 
-Using Gmail SMTP server is easy if you do NOT use two-factor authentication. If you do, you have to create an App Password to use. App Passwords bypass 2FA and allow certain services access to your Gmail account.
+Using Gmail SMTP server is easy if you use two-factor authentication. All you have to do is create an App Password which bypasses 2FA and allows certain services access to your Gmail account. If you do NOT use 2FA on your Google account, you must enable it and then follow these steps.
 
 Go to <https://myaccount.google.com/apppasswords> and login with your Google account.
 
@@ -426,20 +426,6 @@ Select an app (Mail) and a device (Other) and type "PowerShell SMTP" and click G
 ![Screenshot of Gmail App Password Page](/img/week-3/4-gmail-app-password.png)
 
 The displayed password can be used to authenticate your email messages when sent. Using Get-Credential will ask PowerShell to prompt you for login. This is the time you will put in your Google username and app password.
-
-If you do NOT use 2FA on your Google account:
-
-Browse to <https://myaccount.google.com/security>
-
-Select Turn on access under Less secure app access
-
-Graphical user interface, text, application, email
-
-Description automatically generated
-
-![Screenshot of Gmail Setting for Less Secure Apps](/img/week-3/5-gmail-less-secure-app.png)
-
-__WARNING__: DO NOT LEAVE THIS ENABLED. Once you finish the lab, please disable this.
 
 Here's an example of Send-MailMessage
 
