@@ -430,7 +430,7 @@ The displayed password can be used to authenticate your email messages when sent
 Here's an example of Send-MailMessage
 
 ```powershell
-Send-MailMessage -To "reedws@ucmail.uc.edu" -From "someone@gmail.com" -Subject "IT3038C Windows SysInfo" -Body $BODY -SmtpServer smtp.gmail.com -port 587 -UseSSL -Credential (Get-Credential)
+Send-MailMessage -To "someone@mail.uc.edu" -From "someone@gmail.com" -Subject "IT3038C Windows SysInfo" -Body $BODY -SmtpServer smtp.gmail.com -port 587 -UseSSL -Credential (Get-Credential)
 ```
 
 The output of the email should look similar to this:
