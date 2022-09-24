@@ -263,7 +263,7 @@ Using the code you wrote for Lab 9, create a new route at /api that includes the
 
 Your final page should look like this example, including your correct username, a Heroku environment other than "Development" and a working API link:
 
-<https://reedws-test-pre-class-492019.herokuapp.com/>
+<https://it3038c-heroku.herokuapp.com/>
 
 Here are a few hints:
 
