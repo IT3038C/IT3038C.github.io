@@ -69,7 +69,7 @@ const config = require('config')
 Edit `response.send` to include `config.util.getEnv('MYNAME')` and `config.util.getEnv('NODE_ENV')`, something like this:
 
 ```javascript
-response.send('<b>Hello World! My name is = <em>' + process.env.MYNAME + '</em <br /> My Node Environemnt is :' + config.util.getEnv('NODE_ENV') + '</em></b>')
+response.send('<b>Hello World! My name is:<em>' + process.env.MYNAME + '</em> <br /> My Node Environment is:<em>' + config.util.getEnv('NODE_ENV') + '</em></b>')
 ```
 
 Go ahead and open the terminal in VSCode and run:
