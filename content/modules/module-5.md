@@ -27,7 +27,9 @@ Restart PowerShell. The the command `python --version` to verify that Python is 
 
 ## Installing Python on Linux
 
-Python 3 comes installed with Oracle Linux 8, so we don't have to do anything.
+```bash
+sudo yum install python39
+```
 
 ## Verify Python installation
 
@@ -37,7 +39,7 @@ Open the terminal and verify Python is installed properly
 
 Then enter the Python terminal by typing `python` by itself
 
-```powershell
+```bash
 $ python
 
 # Python 3.6.8 (default, Mar  9 2021, 15:28:46)
