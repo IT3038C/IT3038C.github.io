@@ -9,7 +9,7 @@ const darkCodeTheme = require(`prism-react-renderer/themes/dracula`);
 const config = {
   title: `IT3038C - Scripting Languages`,
   tagline: `Wesley Reed`,
-  url: `https://reedws.github.io`,
+  url: `https://it3038c.github.io`,
   baseUrl: `/IT3038C/`,
   onBrokenLinks: `throw`,
   onBrokenMarkdownLinks: `warn`,
@@ -17,7 +17,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: `reedws`, // Usually your GitHub org/user name.
+  organizationName: `IT3038C`, // Usually your GitHub org/user name.
   projectName: `IT3038C`, // Usually your repo name.
   trailingSlash: false,
 
@@ -83,7 +83,7 @@ const config = {
             label: `Modules`,
           },
           {
-            href: `https://github.com/reedws/IT3038C`,
+            href: `https://github.com/IT3038C/IT3038C`,
             label: `GitHub`,
             position: `right`,
           },
@@ -97,7 +97,7 @@ const config = {
             items: [
               {
                 label: `GitHub`,
-                href: `https://github.com/reedws/IT3038C`,
+                href: `https://github.com/IT3038C/IT3038C`,
               },
             ],
           },

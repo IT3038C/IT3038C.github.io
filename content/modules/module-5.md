@@ -343,7 +343,7 @@ We can even nest these in if statements. Let's catch the 'joke':
 ```python
 myName = input()
 
-while myName != 'AJ':
+while myName != 'Wes':
   if myName == 'your name':
     print('Ha ha, very funny. Seriously, who are you?')
     myName = input()
