@@ -310,26 +310,26 @@ NodeJS Modules with NPM
 
 Last up on our tour of modules is NodeJS. Node uses Node Package Manager (NPM) to manage its plugins. NPM is installed with Node. Unlike Python, all NPM modules are installed within the directory you're working in, unless otherwise specified with the `-g` flag.
 
-We installed a module last week to help us get the IP faster. Let's install a helpful module called node-dev. Node-dev will watch the server.js file for changes and automatically restart the service when a change is detected. To install an npm module, use the following. From your 'node' folder:
+We installed a module last week to help us get the IP faster. Let's install a helpful module called nodemon. nodemon will watch the server.js file for changes and automatically restart the service when a change is detected. To install an npm module, use the following. From your 'node' folder:
 
 ```bash
-npm install node-dev
+npm install nodemon
 ```
 
 Notice your folder now contains a 'node_modules' folder. This contains the module and all of its dependencies.
 
 For this particular module, I actually do want to install it globally, so that it can be used in any node folder. To do this, I'll need sudo rights
 
-`$ sudo npm install -g node-dev`
+`$ sudo npm install -g nodemon`
 
-Now outside of our node directory, we can call the node-dev executable. Copy your server.js file from this location to /tmp, then cd to /tmp and run it with node-dev
+Now outside of our node directory, we can call the nodemon executable. Copy your server.js file from this location to /tmp, then cd to /tmp and run it with nodemon
 
 ```bash
 cp server.js /tmp/server.js
 
 cd /tmp
 
-node-dev server.js
+nodemon server.js
 ```
 
 It works, because we installed this module globally.
