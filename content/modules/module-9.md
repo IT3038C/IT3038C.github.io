@@ -6,11 +6,11 @@ slug: /9
 
 Links:
 
-* Regex Cheat Sheet - <https://www.debuggex.com/cheatsheet/regex/python>
+* RegEx Cheat Sheet - <https://www.debuggex.com/cheatsheet/regex/python>
 * Beautiful Soup - <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>
 * PythonForBeginners - <http://www.pythonforbeginners.com/beautifulsoup/beautifulsoup-4-python>
 * Regular Expressions 101 - <https://regex101.com/>
-* Regexdrill - <https://twitter.com/regexdrill>
+* RegExdrill - <https://twitter.com/regexdrill>
 
 ## Web Scraping
 
@@ -183,7 +183,7 @@ The? End – may or may not have an "e" (The End, Th End, but not Thee End)
 
 [@%_-.] – Special characters
 
-\$ - Regex characters used to validate the string need to be 'escaped' with a "\"
+\$ - RegEx characters used to validate the string need to be 'escaped' with a "\"
 ```
 
 Let's do a quick regex test:

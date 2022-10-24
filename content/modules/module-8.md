@@ -1,5 +1,5 @@
 ---
-title: Module 8 – Web Scraping Part 1
+title: Module 8 –  Data Types & RegEx
 sidebar_position: 8
 slug: /8
 ---
@@ -295,7 +295,7 @@ The square brackets indicate that you can specify that list of characters.
 
 [@%_-.] – Special characters
 
-\$ - Regex characters used to validate the string need to be 'escaped' with a "\"
+\$ - RegEx characters used to validate the string need to be 'escaped' with a "\"
 ```
 
 Let's validate an email address.
