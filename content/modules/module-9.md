@@ -53,10 +53,10 @@ PS C:\Users\Administrator> .\venv\webscraping\Scripts\activate.ps1
 (scraping) PS C:\Users\Administrator>
 ```
 
-Run pip install for BeautifulSoup4 and two other modules, lxml and html5lib.
+Run pip install for BeautifulSoup4 and requests
 
 ```bash
-pip install bs4 lxml html5lib requests
+pip install bs4 requests
 ```
 
 Now, create a new file in your Python directory and call it webscraping.py
@@ -66,7 +66,7 @@ from bs4 import BeautifulSoup
 import requests, re
 
 r = requests.get('https://analytics.usa.gov').content
-soup = BeautifulSoup(r, "lxml")
+soup = BeautifulSoup(r, 'html.parser')
 print(type(soup))
 print(soup.prettify()[:100])
 for link in soup.find_all('a'): print(link.get('href'))
@@ -227,7 +227,7 @@ r = requests.get("http://webscraper.io/test-sites/e-commerce/allinone/phones
 Now, run r through BeautifulSoup and assign it to another variable called "soup"
 
 ```python
-soup = BeautifulSoup(r, "lxml")
+soup = BeautifulSoup(r, 'html.parser')
 ```
 
 Let's use our soup data to find all of the links on this page. Let's create a variable called "tags". This variable will use soup.findAll to search through the page's content using regular expression.
@@ -257,14 +257,12 @@ import requests, re 
 from bs4 import BeautifulSoup
 
 r = requests.get("http://webscraper.io/test-sites/e-commerce/allinone/phones").content 
-soup = BeautifulSoup(r, "lxml") 
+soup = BeautifulSoup(r, 'html.parser') 
 tags = soup.findAll("div", {"class":re.compile('(ratings)')}) 
 for p in tags: 
         a = p.findAll("p",{"class":"pull-right"}) 
         print(a[0].string) 
 ```
-
-Notice the use of the lxml parser when we define our BeautifulSoup object names "soup".
 
 Let's do one more scraping example:
 
