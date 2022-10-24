@@ -1,5 +1,5 @@
 ---
-title: Module 8 –  Data Types & RegEx
+title: Module 8 – Data Types & RegEx
 sidebar_position: 8
 slug: /8
 ---

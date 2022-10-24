@@ -1,5 +1,5 @@
 ---
-title: Module 9 – Web Scraping Part 2
+title: Module 9 – Web Scraping
 sidebar_position: 9
 slug: /9
 ---
