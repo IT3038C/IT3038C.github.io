@@ -182,7 +182,7 @@ We're going to write a function that filters this JSON data, then we're going to
 Let's create our function. At the bottom of your api.js file, add the following function called listBlue().
 
 ```javascript
-const listBlue(res) => {
+const listBlue = (res) => {
   const colorBlue = data.filter((item) => {
     return item.color === "blue";
   });
