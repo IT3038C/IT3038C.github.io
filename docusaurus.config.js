@@ -10,7 +10,7 @@ const config = {
   title: `IT3038C - Scripting Languages`,
   tagline: `Wesley Reed`,
   url: `https://it3038c.github.io`,
-  baseUrl: `/IT3038C/`,
+  baseUrl: `/`,
   onBrokenLinks: `throw`,
   onBrokenMarkdownLinks: `warn`,
   favicon: `img/favicon.ico`,
