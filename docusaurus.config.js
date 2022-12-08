@@ -18,7 +18,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: `IT3038C`, // Usually your GitHub org/user name.
-  projectName: `IT3038C`, // Usually your repo name.
+  projectName: `IT3038C.github.i0`, // Usually your repo name.
   trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
