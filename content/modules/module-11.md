@@ -4,9 +4,11 @@ sidebar_position: 11
 slug: /11
 ---
 
+## Heroku is no longer free. I recommend using Fly.io instead but have not had time to re-write this module
+
 List of Links for this week
 
-* <https://www.heroku.com/>
+* <https://fly.io/>
 
 ## Setting up Heroku
 
