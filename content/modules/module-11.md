@@ -1,5 +1,5 @@
 ---
-title: Module 11 – Heroku
+title: Module 11 – Hosting and Deploying
 sidebar_position: 11
 slug: /11
 ---
