@@ -78,7 +78,7 @@ const config = {
           },
           {
             type: `doc`,
-            docId: `module-1`,
+            docId: `module-1/index`,
             position: `left`,
             label: `Modules`,
           },
