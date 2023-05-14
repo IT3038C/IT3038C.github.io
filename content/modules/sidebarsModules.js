@@ -25,10 +25,6 @@ const sidebars = {
             },
           ],
           label: `Module 1`,
-          link: {
-            id: `module-1/github-setup`,
-            type: `doc`,
-          },
           type: `category`,
         },
       ],
