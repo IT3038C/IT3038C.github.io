@@ -55,6 +55,7 @@ const config = {
       {
         path: `content/modules`,
         routeBasePath: `modules`,
+        sidebarPath: require.resolve(`./content/modules/sidebarsModules.js`),
       },
     ],
   ],
@@ -78,7 +79,7 @@ const config = {
           },
           {
             type: `doc`,
-            docId: `module-1/index`,
+            docId: `modules`,
             position: `left`,
             label: `Modules`,
           },
