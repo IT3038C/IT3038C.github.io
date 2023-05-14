@@ -1,6 +1,7 @@
 ---
 title: Github Account Setup
 sidebar_position: 1
+slug: /1/github-setup
 ---
 
 Open <https://github.com>

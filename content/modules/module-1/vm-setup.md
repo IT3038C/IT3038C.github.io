@@ -1,6 +1,7 @@
 ---
 title: Getting Started with your VMs
 sidebar_position: 3
+slug: /1/vm-setup
 ---
 
 ## Introduction
