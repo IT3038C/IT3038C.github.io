@@ -1,7 +1,6 @@
 ---
-title: Module 1 – Getting Started with your VMs
-sidebar_position: 1
-slug: /1-old
+title: Getting Started with your VMs
+sidebar_position: 3
 ---
 
 ## Introduction
@@ -175,79 +174,3 @@ Login as `student` with the password above.
 ![Screenshot of PuTTY SSH Login Prompt](/img/week-1/putty/3-ssh-login.png)
 
 And there you have it. You are now logged in to your Linux machine, no need to use the other console.
-
-## Github Setup
-
-### Account setup
-
-Open <https://github.com>
-
-If you already have an account, feel free to use that one. If not, click "Sign up for GitHub".
-Create an account using your UC email address and create a username, for example, I will register with <reedws@mail.uc.edu> and username reedws.
-
-![Screenshot of GitHub sign-up page](/img/week-1/github/1-sign-up.png)
-
-If you've never used Github, this is a great opportunity to get familiar with how it works. You can create the initial README.md file to say a little about yourself. Just click the green "Continue" button and start editing.
-
-![Screenshot of about me README prompt](/img/week-1/github/2-self-readme.png)
-
-If you already have a Github.com account, you can create a new Repository with the same name as your username, then create the README.md file within to update your Github homepage.
-
-(Optional step) As students of UC, you can get GitHub Pro for free by visiting this link: <https://education.github.com/pack>
-
-### Making a Repository
-
-We're going to create our first repository and do our first Github push. From github.com, click the "+" sign in the top-right corner of the screen and click "New repository"
-
-![Screenshot of GitHub new repo dropdown](/img/week-1/github/3-new-repo.png)
-
-Name the repository `it3038c-scripts` and leave defaults for everything else.
-
-![Screenshot of GitHub new repo setup](/img/week-1/github/4-repo-setup.png)
-
-Click `Create repository`
-
-### Connecting to Windows
-
-Return to your Windows server.
-We're going connect our systems to Github.
-
-Open PowerShell as administrator so we can setup our directory for use with Github. Follow these instructions and DO NOT COPY AND PASTE. You'll need to change certain fields, like your username and email:
-
-Change dir to the root of C:, then create an it3038c-scripts folder and subfolders with files in them. The commands are:
-
-```bash
-cd \
-mkdir it3038c-scripts
-cd it3038c-scripts
-mkdir powershell
-mkdir bash
-new-item -type file powershell\.gitkeep
-new-item -type file bash\.gitkeep
-```
-
-Initialize the git repo and connect it to github, then sync. The commands are:
-
-```bash
-git init
-git remote add origin https://github.com/<your-username>/it3038c-scripts.git
-git config --global user.email "<your-github-email>"
-git config --global user.name "<your-github-username>"
-git add .
-git commit -m 'first commit'
-git checkout -b main
-git branch -d master
-git push origin main
-```
-
-Login with your github.com credentials.
-If you followed all of these steps correctly, you will see your two folders that you just created in your repo on github.com.
-
-## Completing Lab 1
-
-Return to Canvas:
-
-Under Assignments within Module 1, select Lab 1. Enter a text submission with a link to your Github account in this format:
-Link to Github.com: <https://github.com/your-username>
-
-Your Github.com page should contain the it3038c-scripts repository which contains the PowerShell and Bash folders.
