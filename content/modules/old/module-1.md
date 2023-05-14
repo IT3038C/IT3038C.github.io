@@ -1,7 +1,7 @@
 ---
 title: Module 1 – Getting Started with your VMs
 sidebar_position: 1
-slug: /1
+slug: /1-old
 ---
 
 ## Introduction
@@ -183,7 +183,7 @@ And there you have it. You are now logged in to your Linux machine, no need to u
 Open <https://github.com>
 
 If you already have an account, feel free to use that one. If not, click "Sign up for GitHub".
-Create an account using your UC email address and create a username, for example, I will register with reedws@mail.uc.edu and username reedws.
+Create an account using your UC email address and create a username, for example, I will register with <reedws@mail.uc.edu> and username reedws.
 
 ![Screenshot of GitHub sign-up page](/img/week-1/github/1-sign-up.png)
 

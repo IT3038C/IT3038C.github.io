@@ -1,7 +1,7 @@
 ---
 title: Module 3 – PowerShell
 sidebar_position: 3
-slug: /3
+slug: /3-old
 ---
 
 ## List of Links for this week

@@ -1,7 +1,7 @@
 ---
 title: Module 7 - Modules, Plugins, Debugging
 sidebar_position: 7
-slug: /7
+slug: /7-old
 ---
 
 List of Links for this week:

@@ -1,7 +1,7 @@
 ---
 title: Module 2 – Bash
 sidebar_position: 2
-slug: /2
+slug: /2-old
 ---
 
 If you do not have your GitHub account setup, please do that now.

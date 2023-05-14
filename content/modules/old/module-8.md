@@ -1,7 +1,7 @@
 ---
 title: Module 8 – Data Types & RegEx
 sidebar_position: 8
-slug: /8
+slug: /8-old
 ---
 
 ## Python Data Storage Types

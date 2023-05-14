@@ -1,7 +1,7 @@
 ---
 title: Module 10 – Working with APIs
 sidebar_position: 10
-slug: /10
+slug: /10-old
 ---
 
 List of Links for this week

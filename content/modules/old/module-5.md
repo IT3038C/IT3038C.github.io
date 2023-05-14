@@ -1,7 +1,7 @@
 ---
 title: Module 5 – Python
 sidebar_position: 5
-slug: /5
+slug: /5-old
 ---
 
 List of Links for this week:
