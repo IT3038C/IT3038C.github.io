@@ -2,7 +2,7 @@
 sidebar_position: 4.2
 sidebar_label: Finalize
 title: Finalize and Submit the assignment
-draft: false
+slug: /1/python-exercises/finalize
 ---
 
 ## What you need to submit
