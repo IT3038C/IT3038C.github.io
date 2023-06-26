@@ -1,0 +1,49 @@
+---
+sidebar_position: 4.1
+title: Examples
+slug: /1/bash-exercises/demo
+---
+Below are a couple of examples for how you should go about this assignment.
+
+## Example 1:
+### Setup
+1. Navigate to your repository in the command line.
+  - You can either use the `cd PATH_TO_FOLDER` command.
+    - In my case the command was `cd /Users/wesreed/git/School/IT3049/Bash-Exercises`
+    - Use the `pwd` command to **P**rint **W**orking **D**irectory and confirm your location
+  - **OR** You could open VSCode integrated terminal window and it will open in the terminal already in the right path.
+3. Run the tests by running each bash script
+
+  ![example image](assets/failing_tests.png)
+  - Notice all the errors, our goal for this assignment is to resolve them all.
+
+### Getting Down to Business
+1. Open the project in *Visual Studio Code* (Not Visual Studio)
+    <img alt="example image" src={require('./assets/visualStudioCode.png').default} style={{height:`400px`, border:`1px #ddd solid`}}/>
+
+    **Let's try to solve a couple of those tests.**
+
+2. Open the file `1-hello-world.sh`
+    ```bash
+    #!/bin/bash
+
+    ```
+    - Notice the empty implementation of this script. We need to add the code to make it work and output what the test is expecting
+
+3. Consulting the [Bash documentation for echo](https://ss64.com/bash/echo.html). The documentations shows usage examples, and specifies the parameters of the command.
+
+    <img alt="int() docs" src={require('./assets/echoDocs.png').default} style={{height:`500px`, border:`1px #ddd solid`}}/>
+
+    **Key Takeaways:**
+      ```bash
+        #!/bin/bash
+
+        echo "Hello, World!"
+      ```
+4. Re-run the tests again and let's see if it passes
+
+    <img alt="1 passing test" src={require('./assets/1passing_test.png').default} style={{ border:`1px #ddd solid`}}/>
+    - Notice the green dot next to the numbers tests showing one of the tests passed.
+5. Commit your code <img alt="commit logo" style={{height:`20px`, marginBottom:`-4px`}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Octicons-git-commit.svg/1200px-Octicons-git-commit.svg.png"/> `git commit -m "finished test parseInt"`.
+
+**On to the next test .. Rinse 🧼 and Repeat 🔁**
