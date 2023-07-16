@@ -1,18 +1,20 @@
 ---
-title: Bash Backup
+title: Bash Exercises
 sidebar_label: Overview
 sidebar_position: 1
-slug: /2/bash-backup
+slug: /2/bash-exercises
 ---
 ## Learning outcomes
 1. Practice the use of Git and GitHub.
-2. Practice the use of Bash to copy and compress files and directories.
+2. Practice the use of Bash to perform basic operations.
 3. Practice the use of Bash to code solutions to technical problems.
 
 ## Goals
+This is a collection of Bash exercises and coding challenges. The focus in this assignment is to:
 - Practice problem solving.
 - Practice Bash fundamentals.
 - Practice using the official documentation
+
 
 ## Guidelines
 * This assignment utilized automated-tests to check for the correctness of your code. These tests can be a bit specific about what you name things
@@ -29,15 +31,22 @@ slug: /2/bash-backup
       .
       ├── .vscode
       │   └── settings.json
-      ├── 1-backup-file.sh       ⬅️
-      ├── 2-backup-directory.sh  ⬅️
-      ├── test_backup-file.sh
-      ├── test_backup-directory.sh
+      ├── 1-hello-world.sh       ⬅️
+      ├── 2-greeting.sh          ⬅️
+      ├── 3-calculator.sh        ⬅️
+      ├── 4-file-info.sh         ⬅️
+      ├── test_hello-world.sh
+      ├── test_greeting.sh
+      ├── test_calculator.sh
+      ├── test_file-info.sh
       └── README.md              🔼: update this once done
     ```
   * You will only be working on the files marked with the arrows
 2. Clone down the repository to your linux VM.
 4. Run the project tests by running each test script with bash.
+  You should see all the tests failing like so:
+  ![failing tests image](assets/failing_tests.png)
+
 5. Our task would be to implement the functions in the files marked with ⬅️ arrow above until all the tests pass.
 6. At the end of each test, commit your code <img alt="commit logo" style={{height:`20px`, marginBottom:`-4px`}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Octicons-git-commit.svg/1200px-Octicons-git-commit.svg.png"/> `git commit -m "finished test xyz"`.
 
@@ -49,7 +58,8 @@ slug: /2/bash-backup
 
 
 ## Resources
-- [rm man page](https://ss64.com/bash/rm.html)
-- [cp man page](https://ss64.com/bash/cp.html)
-- [mkdir man page](https://ss64.com/bash/mkdir.html)
-- [tar man page](https://ss64.com/bash/tar.html)
+- [echo man page](https://ss64.com/bash/echo.html)
+- [read man page](https://ss64.com/bash/read.html)
+- [if man page](https://ss64.com/bash/if.html)
+- [du man page](https://ss64.com/bash/du.html)
+- [stat man page](https://ss64.com/bash/stat.html)
