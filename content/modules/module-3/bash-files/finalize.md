@@ -2,7 +2,7 @@
 sidebar_position: 1.2
 sidebar_label: Finalize
 title: Finalize and Submit the assignment
-slug: /3/bash-backup/finalize
+slug: /3/bash-files/finalize
 ---
 
 ## What you need to submit
