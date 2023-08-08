@@ -2,7 +2,7 @@
 sidebar_position: 1.2
 sidebar_label: Finalize
 title: Finalize and Submit the assignment
-slug: /2/bash-exercises/finalize
+slug: /2/bash-basics/finalize
 ---
 
 ## What you need to submit
@@ -13,11 +13,7 @@ On canvas, you need to submit:
 
 ## Grading Criteria
 
-You will be graded using the following criteria.
-This assignments has ... Exercises
-
-1. Exercises 95%
-2. Proper using of git and github and making frequent commits and pushes. 5%
+See rubric on Canvas
 
 ## Don't Forget to
 
