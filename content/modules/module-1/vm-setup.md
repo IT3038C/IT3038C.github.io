@@ -99,6 +99,12 @@ Download and install VSCode from <https://code.visualstudio.com/download> and ch
 
 ![Screenshot of VSCode download page](images/linux-vscode-download.png)
 
+Then open a terminal and run the following commands:
+
+```bash
+sudo rpm -i /path/to/code.rpm
+```
+
 ## Windows Setup
 
 Click the Blue Gear icon next to our Windows machine. Again, click "Connect using Remote Console"
