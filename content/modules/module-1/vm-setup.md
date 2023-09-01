@@ -83,6 +83,22 @@ reboot
 
 That'll do it for our CentOS setup for now. Let's switch to Windows.
 
+### Linux Software
+
+Let's install all of the software we're going to need for our class. Please install all software with it's default options.
+
+#### Git
+
+```bash
+sudo yum groupinstall "Development Tools"
+```
+
+#### VS Code
+
+Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the .rpm installer.
+
+![Screenshot of VSCode download page](images/linux-vscode-download.png)
+
 ## Windows Setup
 
 Click the Blue Gear icon next to our Windows machine. Again, click "Connect using Remote Console"
@@ -137,19 +153,3 @@ shutdown -r
 Once rebooted, please take a snapshot of each one of your VMs. From the blue gear menu, click "Create Snapshot". Give it a name if you want, and click Submit. Do this on both your Windows and Linux VMs.
 
 ![Screenshot of Sandbox Create Snapshot dropdown](/img/week-1/sandbox/6-create-snapshot.png)
-
-### Linux Software
-
-Let's install all of the software we're going to need for our class. Please install all software with it's default options.
-
-#### Git
-
-```bash
-sudo yum groupinstall "Development Tools"
-```
-
-#### VS Code
-
-Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the .rpm installer.
-
-![Screenshot of VSCode download page](images/linux-vscode-download.png)
