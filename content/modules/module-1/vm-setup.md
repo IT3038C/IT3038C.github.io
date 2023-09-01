@@ -138,40 +138,18 @@ Once rebooted, please take a snapshot of each one of your VMs. From the blue gea
 
 ![Screenshot of Sandbox Create Snapshot dropdown](/img/week-1/sandbox/6-create-snapshot.png)
 
-### Windows Software
+### Linux Software
 
 Let's install all of the software we're going to need for our class. Please install all software with it's default options.
 
 #### Git
 
-Download and install Git from <https://git-scm.com/download/win> and choose the link for the 64-bit version.
-
-![Screenshot of the 64-bit Git for Windows Setup](/img/week-1/windows/5-git-download.png)
+```bash
+sudo yum groupinstall "Development Tools"
+```
 
 #### VS Code
 
-Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the 64-bit __System Installer__.
+Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the .rpm installer.
 
-![Screenshot of VSCode download page](/img/week-1/windows/6-vscode-download.png)
-
-#### PuTTY
-
-Download and install putty from <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> and choose the link for the 64-bit x86 version.
-
-![Screenshot of PuTTY download page](/img/week-1/windows/7-putty-download.png)
-
-After installing, launch Putty.
-
-Remember your Linux IP address? Enter that into your Host Name value in Putty and click Open.
-
-![Screenshot of PuTTY configuration page with IP entered](/img/week-1/putty/1-configuration.png)
-
-Accept the Servers key by clicking Yes.
-
-![Screenshot of PuTTY host key verification warning](/img/week-1/putty/2-accept-host-key.png)
-
-Login as `student` with the password above.
-
-![Screenshot of PuTTY SSH Login Prompt](/img/week-1/putty/3-ssh-login.png)
-
-And there you have it. You are now logged in to your Linux machine, no need to use the other console.
+![Screenshot of VSCode download page](images/linux-vscode-download.png)
