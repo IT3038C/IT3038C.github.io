@@ -16,11 +16,10 @@ On canvas, you need to submit:
 You will be graded using the following criteria.
 
 1. Correctness and functionality of the script.
-2. Proper usage of switches and arguments.
-3. Proper validation of user input.
-4. Handling of edge cases and error messages.
-5. Code quality and documentation.
-6. Proper using of git and github and making frequent commits and pushes.
+2. Handling all edge cases in Regex.
+3. Handling of edge cases and error messages.
+4. Code quality and documentation.
+5. Proper using of git and github and making frequent commits and pushes.
 
 ## Don't Forget to
 
