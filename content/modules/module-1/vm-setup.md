@@ -91,8 +91,8 @@ Let's install all of the software we're going to need for our class. Please inst
 
 ```bash
 sudo yum groupinstall "Development Tools"
-git config user.email "username@abc.example"   ### replace email with the one on your github account
-git config user.name "Your Name"
+git config --global user.email "username@abc.example"   ### replace email with the one on your github account
+git config --global user.name "Your Name"
 ```
 
 #### VS Code
