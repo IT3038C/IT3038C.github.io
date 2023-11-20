@@ -116,7 +116,8 @@ const sidebars = {
           ],
           label: `Module 11`,
           type: `category`,
-        },{
+        },
+        {
           items: [
             {
               dirName: `module-12`,
