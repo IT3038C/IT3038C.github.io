@@ -6,25 +6,29 @@ slug: /1/vm-setup
 
 ## Introduction
 
-This lab will get you familiar with the VM Sandbox environment, creating a CentOS VM and a Window VM.
+This lab will get you familiar with the VM Sandbox environment and creating a CentOS VM.
 
 Firefox is recommended for all labs. Please note, while the VM Sandbox environment is very robust, it is not perfect. Do not expect high level of performance and anticipate that there might be some latency issues, especially if you are working off-campus.
 
 Setting-up Virtual Machines for this Class
 
-First, login to <https://sandbox02.cech.uc.edu/vcac/>
+First, login to <https://ocr.uc.edu/>
 
-Select the domain "ad.uc.edu" and click Next.
+Select the domain "OhioCyberRange.onmicrosoft.com" and click Next.
 
 ![Screenshot of Sandbox login domain selection](/img/week-1/sandbox/1-login-1.png)
 
 Sign in with your UC username and password.
 
-![Screenshot of Sandbox login page](/img/week-1/sandbox/2-login-2.png)
+Click the "Catalog" tab, which will contain all of the templates available to you. Select your "Scripting Language" Deployment
 
-Click the "Deployments" tab, which will contain all of your requests. Select your "Scripting Language" Deployment
+![Screenshot of Sandbox Catalog page for IT3038C](/img/week-1/sandbox/2-catalog.png)
+
+From here click "Request" and then hit "Submit". Then click on the "Deployments" tab
 
 ![Screenshot of Sandbox Deployments page for IT3038C](/img/week-1/sandbox/3-deployments.png)
+
+Here you will see the deployment you've just requested. You can click the name of it to open the deployment
 
 ## Linux Setup and Validation
 
@@ -35,7 +39,7 @@ Let's select the CentOS server first. Hover over the machine and click the blue 
 Click into the window and press `ENTER` to show the login prompt.
 Login using the following credentials:
 
-- Localhost login: `student`
+- Localhost login: `admin`
 - Password: `Pa$$w0rd`
 
 Click Applications | Terminal
@@ -97,7 +101,7 @@ git config --global user.name "Your Name"
 
 #### VS Code
 
-Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the .rpm installer.
+If VS Code is not already installed, Download and install VSCode from <https://code.visualstudio.com/download> and choose the link for the .rpm installer.
 
 ![Screenshot of VSCode download page](images/linux-vscode-download.png)
 
@@ -106,58 +110,3 @@ Then open a terminal and run the following commands:
 ```bash
 sudo rpm -i /path/to/code.rpm
 ```
-
-## Windows Setup
-
-Click the Blue Gear icon next to our Windows machine. Again, click "Connect using Remote Console"
-
-![Screenshot of Sandbox connect to console dropdown for Windows](/img/week-1/sandbox/5-connect-console-win.png)
-
-At the login prompt, login as:
-
-- User: `Administrator`
-- Password:`Pa$$w0rd`
-
-Click the Start Menu and type PowerShell to launch the PowerShell window.
-
-![Screenshot of Windows Start Menu with search for "po"](/img/week-1/windows/1-start-menu-powershell.png)
-
-First, confirm we have an IP address.
-
-```powershell
-ipconfig
-```
-
-![Screenshot of result of ipconfig command](/img/week-1/windows/2-ipconfig-cmd.png)
-
-Also confirm we can ping a website.
-
-```powershell
-ping www.uc.edu
- ```
-
-![Screenshot of result of ping command for uc.edu](/img/week-1/windows/3-ping-uc-cmd.png)
-
-And why don't we confirm that we can ping our linux machine. You can get the IP address from the ip addr command that we ran above (hint: it starts with 192.)
-
-```powershell
-ping 192.168.33.4    # This will be different for you
-```
-
-![Screenshot of result of ping command for CentOS](/img/week-1/windows/4-ping-centos-cmd.png)
-
-Finally, let's change our Windows hostname as well:
-
-```powershell
-rename-computer reedws-win    ### replace reedws with your username
-```
-
-Now, restart your Windows machine
-
-```powershell
-shutdown -r
-```
-
-Once rebooted, please take a snapshot of each one of your VMs. From the blue gear menu, click "Create Snapshot". Give it a name if you want, and click Submit. Do this on both your Windows and Linux VMs.
-
-![Screenshot of Sandbox Create Snapshot dropdown](/img/week-1/sandbox/6-create-snapshot.png)
