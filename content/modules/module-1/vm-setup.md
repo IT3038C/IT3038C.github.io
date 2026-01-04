@@ -12,7 +12,7 @@ Firefox is recommended for all labs. Please note, while the VM Sandbox environme
 
 Setting-up Virtual Machines for this Class
 
-First, login to <https://ocr.uc.edu/>
+First, login to <https://range.ocri.io>
 
 Select the domain "OhioCyberRange.onmicrosoft.com" and click Next.
 
